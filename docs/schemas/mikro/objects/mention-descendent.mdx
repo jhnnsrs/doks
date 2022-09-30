@@ -1,0 +1,61 @@
+---
+id: mention-descendent
+title: MentionDescendent
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type MentionDescendent implements Node, Descendent {
+  children: [Descendent]
+  untypedChildren: GenericScalar
+  typename: String
+  user: String!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>MentionDescendent.<b>children</b></code>](#)<Bullet />[`[Descendent]`](/docs/schemas/mikro/interfaces/descendent) <Badge class="secondary" text="list"/> <Badge class="secondary" text="interface"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MentionDescendent.<b>untypedChildren</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MentionDescendent.<b>typename</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MentionDescendent.<b>user</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The user that is mentioned
+> 
+
+### Interfaces
+
+#### [`Node`](/docs/schemas/mikro/interfaces/node) <Badge class="secondary" text="interface"/>
+> 
+> 
+
+#### [`Descendent`](/docs/schemas/mikro/interfaces/descendent) <Badge class="secondary" text="interface"/>
+> 
+> 
+
+
+
+
+

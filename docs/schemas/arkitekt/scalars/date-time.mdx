@@ -1,0 +1,34 @@
+---
+id: date-time
+title: DateTime
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `DateTime` scalar type represents a DateTime
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+
+```graphql
+scalar DateTime
+```
+
+
+
+
+### Member of
+
+[`Agent`](/docs/schemas/arkitekt/objects/agent)  <Badge class="secondary" text="object"/><Bullet />[`AppRepository`](/docs/schemas/arkitekt/objects/app-repository)  <Badge class="secondary" text="object"/><Bullet />[`Assignation`](/docs/schemas/arkitekt/objects/assignation)  <Badge class="secondary" text="object"/><Bullet />[`AssignationLog`](/docs/schemas/arkitekt/objects/assignation-log)  <Badge class="secondary" text="object"/><Bullet />[`MirrorRepository`](/docs/schemas/arkitekt/objects/mirror-repository)  <Badge class="secondary" text="object"/><Bullet />[`Provision`](/docs/schemas/arkitekt/objects/provision)  <Badge class="secondary" text="object"/><Bullet />[`ProvisionLog`](/docs/schemas/arkitekt/objects/provision-log)  <Badge class="secondary" text="object"/><Bullet />[`Reservation`](/docs/schemas/arkitekt/objects/reservation)  <Badge class="secondary" text="object"/><Bullet />[`ReservationLog`](/docs/schemas/arkitekt/objects/reservation-log)  <Badge class="secondary" text="object"/><Bullet />[`Template`](/docs/schemas/arkitekt/objects/template)  <Badge class="secondary" text="object"/><Bullet />[`User`](/docs/schemas/arkitekt/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Waiter`](/docs/schemas/arkitekt/objects/waiter)  <Badge class="secondary" text="object"/>
+
+
+

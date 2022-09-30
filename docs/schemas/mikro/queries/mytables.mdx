@@ -1,0 +1,77 @@
+---
+id: mytables
+title: mytables
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+My samples return all of the users samples attached to the current user
+
+```graphql
+mytables(
+  name: String
+  tags: [String]
+  createdAfter: DateTime
+  createdBefore: DateTime
+  creator: ID
+  pinned: Boolean
+  limit: Int
+  offset: Int
+): [Table]
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Search for substring of name
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The tags you want to filter by
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>createdAfter</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>createdBefore</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>creator</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Filter by pinned
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query limit
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>mytables.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query offset
+> 
+
+### Type
+
+#### [`Table`](/docs/schemas/mikro/objects/table) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

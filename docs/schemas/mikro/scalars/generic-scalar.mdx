@@ -1,0 +1,38 @@
+---
+id: generic-scalar
+title: GenericScalar
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `GenericScalar` scalar type represents a generic
+GraphQL scalar value that could be:
+String, Boolean, Int, Float, List or Object.
+
+```graphql
+scalar GenericScalar
+```
+
+
+
+
+### Returned by
+
+[`negotiate`](/docs/schemas/mikro/mutations/negotiate)  <Badge class="secondary" text="mutation"/>
+
+### Member of
+
+[`Column`](/docs/schemas/mikro/objects/column)  <Badge class="secondary" text="object"/><Bullet />[`createExperiment`](/docs/schemas/mikro/mutations/create-experiment)  <Badge class="secondary" text="mutation"/><Bullet />[`createInstrument`](/docs/schemas/mikro/mutations/create-instrument)  <Badge class="secondary" text="mutation"/><Bullet />[`createROI`](/docs/schemas/mikro/mutations/create-roi)  <Badge class="secondary" text="mutation"/><Bullet />[`createSample`](/docs/schemas/mikro/mutations/create-sample)  <Badge class="secondary" text="mutation"/><Bullet />[`Experiment`](/docs/schemas/mikro/objects/experiment)  <Badge class="secondary" text="object"/><Bullet />[`fromXArray`](/docs/schemas/mikro/mutations/from-xarray)  <Badge class="secondary" text="mutation"/><Bullet />[`ImagingEnvironment`](/docs/schemas/mikro/objects/imaging-environment)  <Badge class="secondary" text="object"/><Bullet />[`ImagingEnvironmentInput`](/docs/schemas/mikro/inputs/imaging-environment-input)  <Badge class="secondary" text="input"/><Bullet />[`Instrument`](/docs/schemas/mikro/objects/instrument)  <Badge class="secondary" text="object"/><Bullet />[`MentionDescendent`](/docs/schemas/mikro/objects/mention-descendent)  <Badge class="secondary" text="object"/><Bullet />[`negotiate`](/docs/schemas/mikro/mutations/negotiate)  <Badge class="secondary" text="mutation"/><Bullet />[`Node`](/docs/schemas/mikro/interfaces/node)  <Badge class="secondary" text="interface"/><Bullet />[`ParagraphDescendent`](/docs/schemas/mikro/objects/paragraph-descendent)  <Badge class="secondary" text="object"/><Bullet />[`Representation`](/docs/schemas/mikro/objects/representation)  <Badge class="secondary" text="object"/><Bullet />[`Sample`](/docs/schemas/mikro/objects/sample)  <Badge class="secondary" text="object"/><Bullet />[`Table`](/docs/schemas/mikro/objects/table)  <Badge class="secondary" text="object"/><Bullet />[`updateExperiment`](/docs/schemas/mikro/mutations/update-experiment)  <Badge class="secondary" text="mutation"/><Bullet />[`updateSample`](/docs/schemas/mikro/mutations/update-sample)  <Badge class="secondary" text="mutation"/>
+
+
+

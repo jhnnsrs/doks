@@ -1,0 +1,32 @@
+---
+id: boolean
+title: Boolean
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `Boolean` scalar type represents `true` or `false`.
+
+```graphql
+scalar Boolean
+```
+
+
+
+
+### Member of
+
+[`ArgPort`](/docs/schemas/arkitekt/objects/arg-port)  <Badge class="secondary" text="object"/><Bullet />[`ArgPortInput`](/docs/schemas/arkitekt/inputs/arg-port-input)  <Badge class="secondary" text="input"/><Bullet />[`assign`](/docs/schemas/arkitekt/mutations/assign)  <Badge class="secondary" text="mutation"/><Bullet />[`ChangePermissionsResult`](/docs/schemas/arkitekt/objects/change-permissions-result)  <Badge class="secondary" text="object"/><Bullet />[`ChildPort`](/docs/schemas/arkitekt/objects/child-port)  <Badge class="secondary" text="object"/><Bullet />[`ChildPortInput`](/docs/schemas/arkitekt/inputs/child-port-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateMirrorReturn`](/docs/schemas/arkitekt/objects/create-mirror-return)  <Badge class="secondary" text="object"/><Bullet />[`include`](/docs/schemas/arkitekt/directives/include)  <Badge class="secondary" text="directive"/><Bullet />[`Node`](/docs/schemas/arkitekt/objects/node)  <Badge class="secondary" text="object"/><Bullet />[`Port`](/docs/schemas/arkitekt/interfaces/port)  <Badge class="secondary" text="interface"/><Bullet />[`Provision`](/docs/schemas/arkitekt/objects/provision)  <Badge class="secondary" text="object"/><Bullet />[`ProvisionParams`](/docs/schemas/arkitekt/objects/provision-params)  <Badge class="secondary" text="object"/><Bullet />[`Reservation`](/docs/schemas/arkitekt/objects/reservation)  <Badge class="secondary" text="object"/><Bullet />[`reserve`](/docs/schemas/arkitekt/mutations/reserve)  <Badge class="secondary" text="mutation"/><Bullet />[`ReserveParams`](/docs/schemas/arkitekt/objects/reserve-params)  <Badge class="secondary" text="object"/><Bullet />[`ReserveParamsInput`](/docs/schemas/arkitekt/inputs/reserve-params-input)  <Badge class="secondary" text="input"/><Bullet />[`ResetAgentsReturn`](/docs/schemas/arkitekt/objects/reset-agents-return)  <Badge class="secondary" text="object"/><Bullet />[`ResetAssignationsReturn`](/docs/schemas/arkitekt/objects/reset-assignations-return)  <Badge class="secondary" text="object"/><Bullet />[`ResetNodesReturn`](/docs/schemas/arkitekt/objects/reset-nodes-return)  <Badge class="secondary" text="object"/><Bullet />[`ResetProvisionsReturn`](/docs/schemas/arkitekt/objects/reset-provisions-return)  <Badge class="secondary" text="object"/><Bullet />[`ResetRepositoryReturn`](/docs/schemas/arkitekt/objects/reset-repository-return)  <Badge class="secondary" text="object"/><Bullet />[`ResetReservationsReturn`](/docs/schemas/arkitekt/objects/reset-reservations-return)  <Badge class="secondary" text="object"/><Bullet />[`ReturnPort`](/docs/schemas/arkitekt/objects/return-port)  <Badge class="secondary" text="object"/><Bullet />[`ReturnPortInput`](/docs/schemas/arkitekt/inputs/return-port-input)  <Badge class="secondary" text="input"/><Bullet />[`skip`](/docs/schemas/arkitekt/directives/skip)  <Badge class="secondary" text="directive"/><Bullet />[`StringWidget`](/docs/schemas/arkitekt/objects/string-widget)  <Badge class="secondary" text="object"/><Bullet />[`templates`](/docs/schemas/arkitekt/queries/templates)  <Badge class="secondary" text="query"/><Bullet />[`unlink`](/docs/schemas/arkitekt/mutations/unlink)  <Badge class="secondary" text="mutation"/><Bullet />[`User`](/docs/schemas/arkitekt/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`WidgetInput`](/docs/schemas/arkitekt/inputs/widget-input)  <Badge class="secondary" text="input"/>
+
+
+

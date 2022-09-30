@@ -1,0 +1,85 @@
+---
+id: plane
+title: Plane
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Plane {
+  z: Int
+  y: Int
+  x: Int
+  c: Int
+  t: Int
+  positionX: Float
+  positionY: Float
+  positionZ: Float
+  exposureTime: Float
+  deltaT: Float
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>z</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>y</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>x</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>c</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>t</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>positionX</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>positionY</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>positionZ</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>exposureTime</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Plane.<b>deltaT</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Member of
+
+[`Omero`](/docs/schemas/mikro/objects/omero)  <Badge class="secondary" text="object"/>
+
+
+

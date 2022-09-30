@@ -1,0 +1,67 @@
+---
+id: create-metric
+title: createMetric
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Creates a Representation
+
+```graphql
+createMetric(
+  creator: String
+  experiment: ID
+  key: String!
+  representation: ID
+  sample: ID
+  value: MetricValue!
+): Metric
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>createMetric.<b>creator</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> The Email of the user creating the Representation (only for backend apps)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createMetric.<b>experiment</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> Which Representaiton does this metric belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createMetric.<b>key</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> A cleartext description what this representation represents as data
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createMetric.<b>representation</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> Which Representaiton does this metric belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createMetric.<b>sample</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> Which Representaiton does this metric belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createMetric.<b>value</b></code>](#)<Bullet />[`MetricValue!`](/docs/schemas/mikro/scalars/metric-value) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Type
+
+#### [`Metric`](/docs/schemas/mikro/objects/metric) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

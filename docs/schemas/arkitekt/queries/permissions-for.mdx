@@ -1,0 +1,47 @@
+---
+id: permissions-for
+title: permissionsFor
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+permissionsFor(
+  model: AvailableModels!
+  name: String
+): [Permission]
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>permissionsFor.<b>model</b></code>](#)<Bullet />[`AvailableModels!`](/docs/schemas/arkitekt/enums/available-models) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>permissionsFor.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/arkitekt/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Type
+
+#### [`Permission`](/docs/schemas/arkitekt/objects/permission) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

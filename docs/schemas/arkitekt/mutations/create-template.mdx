@@ -1,0 +1,62 @@
+---
+id: create-template
+title: createTemplate
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+createTemplate(
+  extensions: [String]
+  node: ID!
+  params: GenericScalar
+  policy: GenericScalar
+  version: String
+): Template
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>createTemplate.<b>extensions</b></code>](#)<Bullet />[`[String]`](/docs/schemas/arkitekt/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Desired Extensions
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createTemplate.<b>node</b></code>](#)<Bullet />[`ID!`](/docs/schemas/arkitekt/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The Node you offer to give an implementation for
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createTemplate.<b>params</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/arkitekt/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
+> Some additional Params for your offering
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createTemplate.<b>policy</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/arkitekt/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
+> Some additional Params for your offering
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createTemplate.<b>version</b></code>](#)<Bullet />[`String`](/docs/schemas/arkitekt/scalars/string) <Badge class="secondary" text="scalar"/>
+> Desired Extensions
+> 
+
+### Type
+
+#### [`Template`](/docs/schemas/arkitekt/objects/template) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

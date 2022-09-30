@@ -1,0 +1,81 @@
+---
+id: return-port
+title: ReturnPort
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type ReturnPort implements Port {
+  key: String!
+  label: String
+  kind: PortKind!
+  description: String
+  identifier: Identifier
+  nullable: Boolean!
+  child: ChildPort
+  widget: ReturnWidget
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>key</b></code>](#)<Bullet />[`String!`](/docs/schemas/arkitekt/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>label</b></code>](#)<Bullet />[`String`](/docs/schemas/arkitekt/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>kind</b></code>](#)<Bullet />[`PortKind!`](/docs/schemas/arkitekt/enums/port-kind) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> the type of input
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>description</b></code>](#)<Bullet />[`String`](/docs/schemas/arkitekt/scalars/string) <Badge class="secondary" text="scalar"/>
+> A description for this Port
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>identifier</b></code>](#)<Bullet />[`Identifier`](/docs/schemas/arkitekt/scalars/identifier) <Badge class="secondary" text="scalar"/>
+> The corresponding Model
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>nullable</b></code>](#)<Bullet />[`Boolean!`](/docs/schemas/arkitekt/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>child</b></code>](#)<Bullet />[`ChildPort`](/docs/schemas/arkitekt/objects/child-port) <Badge class="secondary" text="object"/>
+> The child
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPort.<b>widget</b></code>](#)<Bullet />[`ReturnWidget`](/docs/schemas/arkitekt/interfaces/return-widget) <Badge class="secondary" text="interface"/>
+> A return widget
+> 
+
+### Interfaces
+
+#### [`Port`](/docs/schemas/arkitekt/interfaces/port) <Badge class="secondary" text="interface"/>
+> A Port
+> 
+
+
+
+### Member of
+
+[`Node`](/docs/schemas/arkitekt/objects/node)  <Badge class="secondary" text="object"/>
+
+
+

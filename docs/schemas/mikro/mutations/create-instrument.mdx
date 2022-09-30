@@ -1,0 +1,77 @@
+---
+id: create-instrument
+title: createInstrument
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Creates a Representation
+
+```graphql
+createInstrument(
+  detectors: [GenericScalar]
+  dichroics: [GenericScalar]
+  filters: [GenericScalar]
+  lotNumber: String
+  manufacturer: String
+  model: String
+  name: String!
+  serialNumber: String
+): Instrument
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>detectors</b></code>](#)<Bullet />[`[GenericScalar]`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Which Representaiton does this metric belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>dichroics</b></code>](#)<Bullet />[`[GenericScalar]`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Which Representaiton does this metric belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>filters</b></code>](#)<Bullet />[`[GenericScalar]`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Which Representaiton does this metric belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>lotNumber</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>manufacturer</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>model</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>name</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>createInstrument.<b>serialNumber</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Type
+
+#### [`Instrument`](/docs/schemas/mikro/objects/instrument) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

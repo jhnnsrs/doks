@@ -1,0 +1,59 @@
+---
+id: thumbnail
+title: Thumbnail
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Thumbnail(id, representation, image, major_color)
+
+```graphql
+type Thumbnail {
+  id: ID!
+  representation: Representation!
+  image: String
+  majorColor: String
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Thumbnail.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Thumbnail.<b>representation</b></code>](#)<Bullet />[`Representation!`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> The Sample this representation belongs to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Thumbnail.<b>image</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Thumbnail.<b>majorColor</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`thumbnail`](/docs/schemas/mikro/queries/thumbnail)  <Badge class="secondary" text="query"/><Bullet />[`thumbnails`](/docs/schemas/mikro/queries/thumbnails)  <Badge class="secondary" text="query"/><Bullet />[`uploadThumbnail`](/docs/schemas/mikro/mutations/upload-thumbnail)  <Badge class="secondary" text="mutation"/>
+
+### Member of
+
+[`Representation`](/docs/schemas/mikro/objects/representation)  <Badge class="secondary" text="object"/>
+
+
+

@@ -1,0 +1,52 @@
+---
+id: columnsof
+title: columnsof
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+columnsof(
+  id: ID!
+  dtype: [PandasDType]
+  name: String
+): [Column]
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>columnsof.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID to search by
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>columnsof.<b>dtype</b></code>](#)<Bullet />[`[PandasDType]`](/docs/schemas/mikro/enums/pandas-dtype) <Badge class="secondary" text="list"/> <Badge class="secondary" text="enum"/>
+> Filter by dtype
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>columnsof.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Filter by name
+> 
+
+### Type
+
+#### [`Column`](/docs/schemas/mikro/objects/column) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

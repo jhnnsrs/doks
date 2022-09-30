@@ -1,0 +1,32 @@
+---
+id: boolean
+title: Boolean
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `Boolean` scalar type represents `true` or `false`.
+
+```graphql
+scalar Boolean
+```
+
+
+
+
+### Member of
+
+[`ArgPort`](/docs/schemas/fluss/objects/arg-port)  <Badge class="secondary" text="object"/><Bullet />[`ArgPortChild`](/docs/schemas/fluss/objects/arg-port-child)  <Badge class="secondary" text="object"/><Bullet />[`ArgPortInput`](/docs/schemas/fluss/inputs/arg-port-input)  <Badge class="secondary" text="input"/><Bullet />[`ChildPortInput`](/docs/schemas/fluss/inputs/child-port-input)  <Badge class="secondary" text="input"/><Bullet />[`drawvanilla`](/docs/schemas/fluss/mutations/drawvanilla)  <Badge class="secondary" text="mutation"/><Bullet />[`Flow`](/docs/schemas/fluss/objects/flow)  <Badge class="secondary" text="object"/><Bullet />[`Global`](/docs/schemas/fluss/objects/global)  <Badge class="secondary" text="object"/><Bullet />[`include`](/docs/schemas/fluss/directives/include)  <Badge class="secondary" text="directive"/><Bullet />[`ReturnPort`](/docs/schemas/fluss/objects/return-port)  <Badge class="secondary" text="object"/><Bullet />[`ReturnPortChild`](/docs/schemas/fluss/objects/return-port-child)  <Badge class="secondary" text="object"/><Bullet />[`ReturnPortInput`](/docs/schemas/fluss/inputs/return-port-input)  <Badge class="secondary" text="input"/><Bullet />[`ReturnWidget`](/docs/schemas/fluss/objects/return-widget)  <Badge class="secondary" text="object"/><Bullet />[`skip`](/docs/schemas/fluss/directives/skip)  <Badge class="secondary" text="directive"/><Bullet />[`StreamItem`](/docs/schemas/fluss/objects/stream-item)  <Badge class="secondary" text="object"/><Bullet />[`StreamItemInput`](/docs/schemas/fluss/inputs/stream-item-input)  <Badge class="secondary" text="input"/><Bullet />[`updatediagram`](/docs/schemas/fluss/mutations/updatediagram)  <Badge class="secondary" text="mutation"/><Bullet />[`User`](/docs/schemas/fluss/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Widget`](/docs/schemas/fluss/objects/widget)  <Badge class="secondary" text="object"/><Bullet />[`WidgetInput`](/docs/schemas/fluss/inputs/widget-input)  <Badge class="secondary" text="input"/>
+
+
+

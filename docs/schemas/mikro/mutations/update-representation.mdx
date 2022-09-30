@@ -1,0 +1,65 @@
+---
+id: update-representation
+title: updateRepresentation
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Updates an Representation (also retriggers meta-data retrieval from data stored in)
+
+```graphql
+updateRepresentation(
+  origins: [ID]
+  rep: ID!
+  sample: ID
+  tags: [String]
+  variety: RepresentationVarietyInput
+): Representation
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>updateRepresentation.<b>origins</b></code>](#)<Bullet />[`[ID]`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Which representations were used to create this representation
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>updateRepresentation.<b>rep</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> Which sample does this representation belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>updateRepresentation.<b>sample</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> The sample
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>updateRepresentation.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Tags
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>updateRepresentation.<b>variety</b></code>](#)<Bullet />[`RepresentationVarietyInput`](/docs/schemas/mikro/enums/representation-variety-input) <Badge class="secondary" text="enum"/>
+> The variety of the representation
+> 
+
+### Type
+
+#### [`Representation`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="object"/>
+> A Representation is a multi-dimensional Array that can do what ever it wants
+
+
+@elements/rep:latest
+> 
+
+
+
+
+

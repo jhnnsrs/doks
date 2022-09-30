@@ -1,0 +1,49 @@
+---
+id: negotiate
+title: negotiate
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+negotiate(
+  additionals: GenericScalar
+  internal: Boolean
+): GenericScalar
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>negotiate.<b>additionals</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
+> Additional Parameters
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>negotiate.<b>internal</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> is this now a boolean
+> 
+
+### Type
+
+#### [`GenericScalar`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
+> The `GenericScalar` scalar type represents a generic
+GraphQL scalar value that could be:
+String, Boolean, Int, Float, List or Object.
+> 
+
+
+
+
+

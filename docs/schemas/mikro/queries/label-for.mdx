@@ -1,0 +1,47 @@
+---
+id: label-for
+title: labelFor
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Get a label for a specific instance on a specific representation
+
+```graphql
+labelFor(
+  representation: ID!
+  instance: Int!
+): Label
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>labelFor.<b>representation</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID to search by
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>labelFor.<b>instance</b></code>](#)<Bullet />[`Int!`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The instance on the representation
+> 
+
+### Type
+
+#### [`Label`](/docs/schemas/mikro/objects/label) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

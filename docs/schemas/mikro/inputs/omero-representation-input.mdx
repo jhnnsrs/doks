@@ -1,0 +1,75 @@
+---
+id: omero-representation-input
+title: OmeroRepresentationInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input OmeroRepresentationInput {
+  planes: [PlaneInput]
+  channels: [ChannelInput]
+  physicalSize: PhysicalSizeInput
+  scale: [Float]
+  acquisitionDate: DateTime
+  objectiveSettings: ObjectiveSettingsInput
+  imagingEnvironment: ImagingEnvironmentInput
+  instrument: ID
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>planes</b></code>](#)<Bullet />[`[PlaneInput]`](/docs/schemas/mikro/inputs/plane-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>channels</b></code>](#)<Bullet />[`[ChannelInput]`](/docs/schemas/mikro/inputs/channel-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>physicalSize</b></code>](#)<Bullet />[`PhysicalSizeInput`](/docs/schemas/mikro/inputs/physical-size-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>scale</b></code>](#)<Bullet />[`[Float]`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>acquisitionDate</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>objectiveSettings</b></code>](#)<Bullet />[`ObjectiveSettingsInput`](/docs/schemas/mikro/inputs/objective-settings-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>imagingEnvironment</b></code>](#)<Bullet />[`ImagingEnvironmentInput`](/docs/schemas/mikro/inputs/imaging-environment-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OmeroRepresentationInput.<b>instrument</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Member of
+
+[`fromXArray`](/docs/schemas/mikro/mutations/from-xarray)  <Badge class="secondary" text="mutation"/>
+
+
+

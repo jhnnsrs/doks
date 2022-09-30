@@ -1,0 +1,80 @@
+---
+id: roitype
+title: ROIType
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An enumeration.
+
+```graphql
+enum ROIType {
+  ELLIPSE
+  POLYGON
+  LINE
+  RECTANGLE
+  PATH
+  UNKNOWN
+  FRAME
+  SLICE
+  POINT
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>ELLIPSE</b></code>](#) 
+> Ellipse
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>POLYGON</b></code>](#) 
+> POLYGON
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>LINE</b></code>](#) 
+> Line
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>RECTANGLE</b></code>](#) 
+> Rectangle
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>PATH</b></code>](#) 
+> Path
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>UNKNOWN</b></code>](#) 
+> Unknown
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>FRAME</b></code>](#) 
+> Frame
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>SLICE</b></code>](#) 
+> Slice
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROIType.<b>POINT</b></code>](#) 
+> Point
+> 
+
+
+
+### Member of
+
+[`ROI`](/docs/schemas/mikro/objects/roi)  <Badge class="secondary" text="object"/>
+
+
+

@@ -1,0 +1,84 @@
+---
+id: run
+title: Run
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Run {
+  id: ID!
+  createdAt: DateTime!
+  flow: Flow
+  assignation: String
+  status: String
+  snapshots: [Snapshot!]!
+  logs: [RunLog!]!
+  events: [RunEvent!]!
+  latestSnapshot: Snapshot
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/fluss/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/fluss/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>flow</b></code>](#)<Bullet />[`Flow`](/docs/schemas/fluss/objects/flow) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>assignation</b></code>](#)<Bullet />[`String`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>status</b></code>](#)<Bullet />[`String`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>snapshots</b></code>](#)<Bullet />[`[Snapshot!]!`](/docs/schemas/fluss/objects/snapshot) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>logs</b></code>](#)<Bullet />[`[RunLog!]!`](/docs/schemas/fluss/objects/run-log) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>events</b></code>](#)<Bullet />[`[RunEvent!]!`](/docs/schemas/fluss/objects/run-event) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Run.<b>latestSnapshot</b></code>](#)<Bullet />[`Snapshot`](/docs/schemas/fluss/objects/snapshot) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`run`](/docs/schemas/fluss/queries/run)  <Badge class="secondary" text="query"/><Bullet />[`runs`](/docs/schemas/fluss/queries/runs)  <Badge class="secondary" text="query"/><Bullet />[`start`](/docs/schemas/fluss/mutations/start)  <Badge class="secondary" text="mutation"/>
+
+### Member of
+
+[`Flow`](/docs/schemas/fluss/objects/flow)  <Badge class="secondary" text="object"/><Bullet />[`RunEvent`](/docs/schemas/fluss/objects/run-event)  <Badge class="secondary" text="object"/><Bullet />[`RunLog`](/docs/schemas/fluss/objects/run-log)  <Badge class="secondary" text="object"/><Bullet />[`Snapshot`](/docs/schemas/fluss/objects/snapshot)  <Badge class="secondary" text="object"/>
+
+
+

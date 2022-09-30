@@ -1,0 +1,428 @@
+---
+id: representation
+title: Representation
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+A Representation is a multi-dimensional Array that can do what ever it wants
+
+
+@elements/rep:latest
+
+```graphql
+type Representation {
+  id: ID!
+  store: Store
+  shape: [Int!]
+  dims: [String!]
+  hasArray: Boolean!
+  name: String
+  unique: UUID!
+  fileversion: String!
+  meta: GenericScalar
+  origins: [Representation!]!
+  fileOrigins: [OmeroFile!]!
+  roiOrigins: [ROI!]!
+  sample: Sample
+  description: String
+  type: String
+  variety: RepresentationVariety!
+  chain: String
+  nodeid: String
+  createdAt: DateTime!
+  creator: User
+  pinnedBy: [User!]!
+  tags: [String]
+  derived(
+  name: String
+  pinned: Boolean
+  tags: [String]
+  ids: [String]
+  experiments: [ID]
+  samples: [ID]
+  noChildren: Boolean
+  ordering: String
+  hasMetric: String
+  order: [String]
+  variety: RepresentationVarietyInput
+  forceThumbnail: Boolean
+  createdAfter: DateTime
+  creator: ID
+  createdBefore: DateTime
+  derivedTags: [String]
+  limit: Int
+  offset: Int
+): [Representation]
+  omero: Omero
+  metrics(
+  keys: [String]
+  sample: ID
+  experiment: ID
+  representation: ID
+  order: [String]
+  creator: ID
+  limit: Int
+  offset: Int
+): [Metric]
+  thumbnails: [Thumbnail!]!
+  rois(
+  pinned: Boolean
+  representation: ID
+  repname: String
+  createdAfter: DateTime
+  createdBefore: DateTime
+  creator: ID
+  ordering: String
+  tags: [String]
+  type: [RoiTypeInput]
+  limit: Int
+  offset: Int
+): [ROI]
+  labels: [Label!]!
+  tables(
+  name: String
+  tags: [String]
+  createdAfter: DateTime
+  createdBefore: DateTime
+  creator: ID
+  pinned: Boolean
+  limit: Int
+  offset: Int
+): [Table]
+  identifier: String
+  latestThumbnail: Thumbnail
+  comments: [Comment]
+  pinned: Boolean
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>store</b></code>](#)<Bullet />[`Store`](/docs/schemas/mikro/scalars/store) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>shape</b></code>](#)<Bullet />[`[Int!]`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The arrays shape
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>dims</b></code>](#)<Bullet />[`[String!]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The arrays dimension
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>hasArray</b></code>](#)<Bullet />[`Boolean!`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> Does this Model have attached Data?
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Cleartext name
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>unique</b></code>](#)<Bullet />[`UUID!`](/docs/schemas/mikro/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> A unique identifier for this array
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>fileversion</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The File Version of this Array
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>meta</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>origins</b></code>](#)<Bullet />[`[Representation!]!`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>fileOrigins</b></code>](#)<Bullet />[`[OmeroFile!]!`](/docs/schemas/mikro/objects/omero-file) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>roiOrigins</b></code>](#)<Bullet />[`[ROI!]!`](/docs/schemas/mikro/objects/roi) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>sample</b></code>](#)<Bullet />[`Sample`](/docs/schemas/mikro/objects/sample) <Badge class="secondary" text="object"/>
+> The Sample this representation belosngs to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>description</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>type</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> The Representation can have varying types, consult your API
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>variety</b></code>](#)<Bullet />[`RepresentationVariety!`](/docs/schemas/mikro/enums/representation-variety) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> The Representation can have vasrying types, consult your API
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>chain</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>nodeid</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>creator</b></code>](#)<Bullet />[`User`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>pinnedBy</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> A comma-separated list of tags.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>derived</b></code>](#)<Bullet />[`[Representation]`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Derived Images from this Image
+> ##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Search for substring of name
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Filter by pinned
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The tags you want to filter by
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>ids</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The ids you want to filter by
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>experiments</b></code>](#)<Bullet />[`[ID]`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The Experiment the Sample of this Representation belongs to
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>samples</b></code>](#)<Bullet />[`[ID]`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>noChildren</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Only show Representations without children
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>ordering</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Ordering
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>hasMetric</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Filter by required Metric Keys (seperated by ,)
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>order</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Order by Keys
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>variety</b></code>](#)<Bullet />[`RepresentationVarietyInput`](/docs/schemas/mikro/enums/representation-variety-input) <Badge class="secondary" text="enum"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>forceThumbnail</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>createdAfter</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>creator</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>createdBefore</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>derivedTags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The tags you want to filter by
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query limit
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.derived.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query offset
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>omero</b></code>](#)<Bullet />[`Omero`](/docs/schemas/mikro/objects/omero) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>metrics</b></code>](#)<Bullet />[`[Metric]`](/docs/schemas/mikro/objects/metric) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Associated metrics of this Image
+> ##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>keys</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The key you want to filter by
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>sample</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>experiment</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>representation</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>order</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Order by Keys
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>creator</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query limit
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.metrics.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query offset
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>thumbnails</b></code>](#)<Bullet />[`[Thumbnail!]!`](/docs/schemas/mikro/objects/thumbnail) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> The Sample this representation belongs to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>rois</b></code>](#)<Bullet />[`[ROI]`](/docs/schemas/mikro/objects/roi) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Associated rois
+> ##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Filter by pinned
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>representation</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>repname</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>createdAfter</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>createdBefore</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>creator</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>ordering</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Ordering
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The tags you want to filter by
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>type</b></code>](#)<Bullet />[`[RoiTypeInput]`](/docs/schemas/mikro/enums/roi-type-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query limit
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.rois.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query offset
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>labels</b></code>](#)<Bullet />[`[Label!]!`](/docs/schemas/mikro/objects/label) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>tables</b></code>](#)<Bullet />[`[Table]`](/docs/schemas/mikro/objects/table) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Associated tables
+> ##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> Search for substring of name
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The tags you want to filter by
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>createdAfter</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>createdBefore</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>creator</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Filter by pinned
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query limit
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Representation.tables.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query offset
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>identifier</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> The Arkitekt identifier
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>latestThumbnail</b></code>](#)<Bullet />[`Thumbnail`](/docs/schemas/mikro/objects/thumbnail) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>comments</b></code>](#)<Bullet />[`[Comment]`](/docs/schemas/mikro/objects/comment) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Representation.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`accessiblerepresentations`](/docs/schemas/mikro/queries/accessiblerepresentations)  <Badge class="secondary" text="query"/><Bullet />[`fromXArray`](/docs/schemas/mikro/mutations/from-xarray)  <Badge class="secondary" text="mutation"/><Bullet />[`myrepresentations`](/docs/schemas/mikro/queries/myrepresentations)  <Badge class="secondary" text="query"/><Bullet />[`pinRepresentation`](/docs/schemas/mikro/mutations/pin-representation)  <Badge class="secondary" text="mutation"/><Bullet />[`randomRepresentation`](/docs/schemas/mikro/queries/random-representation)  <Badge class="secondary" text="query"/><Bullet />[`representation`](/docs/schemas/mikro/queries/representation)  <Badge class="secondary" text="query"/><Bullet />[`representations`](/docs/schemas/mikro/queries/representations)  <Badge class="secondary" text="query"/><Bullet />[`representationsForGroup`](/docs/schemas/mikro/queries/representations-for-group)  <Badge class="secondary" text="query"/><Bullet />[`representationsForUser`](/docs/schemas/mikro/queries/representations-for-user)  <Badge class="secondary" text="query"/><Bullet />[`sharedrepresentations`](/docs/schemas/mikro/queries/sharedrepresentations)  <Badge class="secondary" text="query"/><Bullet />[`updateRepresentation`](/docs/schemas/mikro/mutations/update-representation)  <Badge class="secondary" text="mutation"/>
+
+### Member of
+
+[`Label`](/docs/schemas/mikro/objects/label)  <Badge class="secondary" text="object"/><Bullet />[`Metric`](/docs/schemas/mikro/objects/metric)  <Badge class="secondary" text="object"/><Bullet />[`Omero`](/docs/schemas/mikro/objects/omero)  <Badge class="secondary" text="object"/><Bullet />[`OmeroFile`](/docs/schemas/mikro/objects/omero-file)  <Badge class="secondary" text="object"/><Bullet />[`Representation`](/docs/schemas/mikro/objects/representation)  <Badge class="secondary" text="object"/><Bullet />[`RepresentationEvent`](/docs/schemas/mikro/objects/representation-event)  <Badge class="secondary" text="object"/><Bullet />[`ROI`](/docs/schemas/mikro/objects/roi)  <Badge class="secondary" text="object"/><Bullet />[`Sample`](/docs/schemas/mikro/objects/sample)  <Badge class="secondary" text="object"/><Bullet />[`Table`](/docs/schemas/mikro/objects/table)  <Badge class="secondary" text="object"/><Bullet />[`Thumbnail`](/docs/schemas/mikro/objects/thumbnail)  <Badge class="secondary" text="object"/>
+
+
+

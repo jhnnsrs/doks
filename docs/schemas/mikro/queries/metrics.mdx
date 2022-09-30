@@ -1,0 +1,77 @@
+---
+id: metrics
+title: metrics
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+All Samples
+
+```graphql
+metrics(
+  keys: [String]
+  sample: ID
+  experiment: ID
+  representation: ID
+  order: [String]
+  creator: ID
+  limit: Int
+  offset: Int
+): [Metric]
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>keys</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> The key you want to filter by
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>sample</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>experiment</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>representation</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>order</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Order by Keys
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>creator</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query limit
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>metrics.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> Query offset
+> 
+
+### Type
+
+#### [`Metric`](/docs/schemas/mikro/objects/metric) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

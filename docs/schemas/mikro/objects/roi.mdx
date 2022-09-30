@@ -1,0 +1,109 @@
+---
+id: roi
+title: ROI
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type ROI {
+  id: ID!
+  nodeid: String
+  creator: User!
+  vectors: [Vector]
+  type: ROIType!
+  color: String
+  signature: String
+  createdAt: DateTime!
+  representation: Representation
+  label: String
+  pinnedBy: [User!]!
+  tags: [String]
+  derivedRepresentations: [Representation!]!
+  pinned: Boolean
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>nodeid</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>creator</b></code>](#)<Bullet />[`User!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>vectors</b></code>](#)<Bullet />[`[Vector]`](/docs/schemas/mikro/objects/vector) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>type</b></code>](#)<Bullet />[`ROIType!`](/docs/schemas/mikro/enums/roitype) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> The Representation can have varying types, consult your API
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>color</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>signature</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>representation</b></code>](#)<Bullet />[`Representation`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>label</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>pinnedBy</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> A comma-separated list of tags.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>derivedRepresentations</b></code>](#)<Bullet />[`[Representation!]!`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ROI.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`createROI`](/docs/schemas/mikro/mutations/create-roi)  <Badge class="secondary" text="mutation"/><Bullet />[`pinROI`](/docs/schemas/mikro/mutations/pin-roi)  <Badge class="secondary" text="mutation"/><Bullet />[`roi`](/docs/schemas/mikro/queries/roi)  <Badge class="secondary" text="query"/><Bullet />[`rois`](/docs/schemas/mikro/queries/rois)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`Representation`](/docs/schemas/mikro/objects/representation)  <Badge class="secondary" text="object"/><Bullet />[`RoiEvent`](/docs/schemas/mikro/objects/roi-event)  <Badge class="secondary" text="object"/>
+
+
+

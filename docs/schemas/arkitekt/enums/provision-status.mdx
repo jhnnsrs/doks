@@ -1,0 +1,100 @@
+---
+id: provision-status
+title: ProvisionStatus
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An enumeration.
+
+```graphql
+enum ProvisionStatus {
+  PENDING
+  BOUND
+  PROVIDING
+  ACTIVE
+  INACTIVE
+  CANCELING
+  LOST
+  RECONNECTING
+  DENIED
+  ERROR
+  CRITICAL
+  ENDED
+  CANCELLED
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>PENDING</b></code>](#) 
+> Pending (Request has been created and waits for its initial creation)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>BOUND</b></code>](#) 
+> Bound (Provision was bound to an Agent)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>PROVIDING</b></code>](#) 
+> Providing (Request has been send to its Agent and waits for Result
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>ACTIVE</b></code>](#) 
+> Active (Provision is currently active)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>INACTIVE</b></code>](#) 
+> Inactive (Provision is currently not active)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>CANCELING</b></code>](#) 
+> Cancelling (Provisions is currently being cancelled)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>LOST</b></code>](#) 
+> Lost (Subscribers to this Topic have lost their connection)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>RECONNECTING</b></code>](#) 
+> Reconnecting (We are trying to Reconnect to this Topic)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>DENIED</b></code>](#) 
+> Denied (Provision was rejected for this User)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>ERROR</b></code>](#) 
+> Error (Reservation was not able to be performed (See StatusMessage)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>CRITICAL</b></code>](#) 
+> Critical (Provision resulted in an critical system error)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>ENDED</b></code>](#) 
+> Ended (Provision was cancelled by the Platform and will no longer create Topics)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ProvisionStatus.<b>CANCELLED</b></code>](#) 
+> Cancelled (Provision was cancelled by the User and will no longer create Topics)
+> 
+
+
+
+### Member of
+
+[`Provision`](/docs/schemas/arkitekt/objects/provision)  <Badge class="secondary" text="object"/>
+
+
+

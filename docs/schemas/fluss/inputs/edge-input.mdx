@@ -1,0 +1,70 @@
+---
+id: edge-input
+title: EdgeInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input EdgeInput {
+  id: String!
+  typename: String!
+  source: String!
+  target: String!
+  sourceHandle: String!
+  targetHandle: String!
+  stream: [StreamItemInput]
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>EdgeInput.<b>id</b></code>](#)<Bullet />[`String!`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EdgeInput.<b>typename</b></code>](#)<Bullet />[`String!`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EdgeInput.<b>source</b></code>](#)<Bullet />[`String!`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EdgeInput.<b>target</b></code>](#)<Bullet />[`String!`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EdgeInput.<b>sourceHandle</b></code>](#)<Bullet />[`String!`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EdgeInput.<b>targetHandle</b></code>](#)<Bullet />[`String!`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EdgeInput.<b>stream</b></code>](#)<Bullet />[`[StreamItemInput]`](/docs/schemas/fluss/inputs/stream-item-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+
+
+### Member of
+
+[`GraphInput`](/docs/schemas/fluss/inputs/graph-input)  <Badge class="secondary" text="input"/>
+
+
+

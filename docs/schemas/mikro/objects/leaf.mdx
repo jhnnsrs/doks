@@ -1,0 +1,62 @@
+---
+id: leaf
+title: Leaf
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Leaf implements Descendent {
+  typename: String
+  bold: Boolean
+  italic: Boolean
+  code: Boolean
+  text: String
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Leaf.<b>typename</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Leaf.<b>bold</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Is this a bold leaf?
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Leaf.<b>italic</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Is this a italic leaf?
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Leaf.<b>code</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Is this a code leaf?
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Leaf.<b>text</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> The text of the leaf
+> 
+
+### Interfaces
+
+#### [`Descendent`](/docs/schemas/mikro/interfaces/descendent) <Badge class="secondary" text="interface"/>
+> 
+> 
+
+
+
+
+

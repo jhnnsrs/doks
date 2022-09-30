@@ -1,0 +1,98 @@
+---
+id: comment
+title: Comment
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Comment {
+  id: ID!
+  contentType: CommentableModels
+  objectId: Int!
+  user: User!
+  text: String!
+  createdAt: DateTime!
+  parent: Comment
+  descendents: [Descendent]
+  mentions: [User!]!
+  children(
+  limit: Int
+  offset: Int
+): [Comment]
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>contentType</b></code>](#)<Bullet />[`CommentableModels`](/docs/schemas/mikro/enums/commentable-models) <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>objectId</b></code>](#)<Bullet />[`Int!`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>user</b></code>](#)<Bullet />[`User!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>text</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>parent</b></code>](#)<Bullet />[`Comment`](/docs/schemas/mikro/objects/comment) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>descendents</b></code>](#)<Bullet />[`[Descendent]`](/docs/schemas/mikro/interfaces/descendent) <Badge class="secondary" text="list"/> <Badge class="secondary" text="interface"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>mentions</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Comment.<b>children</b></code>](#)<Bullet />[`[Comment]`](/docs/schemas/mikro/objects/comment) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Comment.children.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> How many children to return
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Comment.children.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> The offset for the children
+> 
+
+
+
+### Returned by
+
+[`commentsfor`](/docs/schemas/mikro/queries/commentsfor)  <Badge class="secondary" text="query"/><Bullet />[`createComment`](/docs/schemas/mikro/mutations/create-comment)  <Badge class="secondary" text="mutation"/><Bullet />[`mymentions`](/docs/schemas/mikro/queries/mymentions)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`Comment`](/docs/schemas/mikro/objects/comment)  <Badge class="secondary" text="object"/><Bullet />[`MentionEvent`](/docs/schemas/mikro/objects/mention-event)  <Badge class="secondary" text="object"/><Bullet />[`Representation`](/docs/schemas/mikro/objects/representation)  <Badge class="secondary" text="object"/>
+
+
+

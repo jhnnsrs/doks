@@ -1,0 +1,50 @@
+---
+id: agent-status
+title: AgentStatus
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An enumeration.
+
+```graphql
+enum AgentStatus {
+  ACTIVE
+  DISCONNECTED
+  VANILLA
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>AgentStatus.<b>ACTIVE</b></code>](#) 
+> Active
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AgentStatus.<b>DISCONNECTED</b></code>](#) 
+> Disconnected
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AgentStatus.<b>VANILLA</b></code>](#) 
+> Complete Vanilla Scenario after a forced restart of
+> 
+
+
+
+### Member of
+
+[`Agent`](/docs/schemas/arkitekt/objects/agent)  <Badge class="secondary" text="object"/>
+
+
+

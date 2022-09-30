@@ -1,0 +1,67 @@
+---
+id: assign
+title: assign
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+assign(
+  args: [AnyInput]
+  cached: Boolean
+  log: Boolean
+  parent: ID
+  reference: String
+  reservation: ID!
+): Assignation
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>assign.<b>args</b></code>](#)<Bullet />[`[AnyInput]`](/docs/schemas/arkitekt/scalars/any-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Additional Params
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assign.<b>cached</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/arkitekt/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Should we allow cached results (only applicable if node was registered as pure)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assign.<b>log</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/arkitekt/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> Should we log intermediate resulst? (if also persist is true these will be persisted to the log system)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assign.<b>parent</b></code>](#)<Bullet />[`ID`](/docs/schemas/arkitekt/scalars/id) <Badge class="secondary" text="scalar"/>
+> If this task inherits from another task
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assign.<b>reference</b></code>](#)<Bullet />[`String`](/docs/schemas/arkitekt/scalars/string) <Badge class="secondary" text="scalar"/>
+> A reference
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assign.<b>reservation</b></code>](#)<Bullet />[`ID!`](/docs/schemas/arkitekt/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Type
+
+#### [`Assignation`](/docs/schemas/arkitekt/objects/assignation) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

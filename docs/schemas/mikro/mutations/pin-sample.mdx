@@ -1,0 +1,47 @@
+---
+id: pin-sample
+title: pinSample
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Sets the pin
+
+```graphql
+pinSample(
+  id: ID!
+  pin: Boolean!
+): Sample
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>pinSample.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the representation
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>pinSample.<b>pin</b></code>](#)<Bullet />[`Boolean!`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The pin
+> 
+
+### Type
+
+#### [`Sample`](/docs/schemas/mikro/objects/sample) <Badge class="secondary" text="object"/>
+> Samples are storage containers for representations. A Sample is to be understood analogous to a Biological Sample. It existed in Time (the time of acquisiton and experimental procedure), was measured in space (x,y,z) and in different modalities (c). Sample therefore provide a datacontainer where each Representation of the data shares the same dimensions. Every transaction to our image data is still part of the original acuqistion, so also filtered images are refering back to the sample
+> 
+
+
+
+
+

@@ -1,0 +1,95 @@
+---
+id: from-xarray
+title: fromXArray
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Creates a Representation
+
+```graphql
+fromXArray(
+  creator: String
+  fileOrigins: [ID]
+  meta: GenericScalar
+  name: String
+  omero: OmeroRepresentationInput
+  origins: [ID]
+  roiOrigins: [ID]
+  sample: ID
+  tags: [String]
+  variety: RepresentationVarietyInput
+  xarray: XArray!
+): Representation
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>creator</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> The Email of the user creating the Representation (only for backend apps)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>fileOrigins</b></code>](#)<Bullet />[`[ID]`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Which files were used to create this representation
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>meta</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
+> Meta Parameters
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> A cleartext description what this representation represents as data
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>omero</b></code>](#)<Bullet />[`OmeroRepresentationInput`](/docs/schemas/mikro/inputs/omero-representation-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>origins</b></code>](#)<Bullet />[`[ID]`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Which representations were used to create this representation
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>roiOrigins</b></code>](#)<Bullet />[`[ID]`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Which rois were used to create this representation
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>sample</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
+> Which sample does this representation belong to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Do you want to tag the repsresentation?
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>variety</b></code>](#)<Bullet />[`RepresentationVarietyInput`](/docs/schemas/mikro/enums/representation-variety-input) <Badge class="secondary" text="enum"/>
+> A description of the variety
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>fromXArray.<b>xarray</b></code>](#)<Bullet />[`XArray!`](/docs/schemas/mikro/scalars/xarray) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The X Arra
+> 
+
+### Type
+
+#### [`Representation`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="object"/>
+> A Representation is a multi-dimensional Array that can do what ever it wants
+
+
+@elements/rep:latest
+> 
+
+
+
+
+

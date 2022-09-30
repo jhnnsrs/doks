@@ -1,0 +1,36 @@
+---
+id: string
+title: String
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+
+```graphql
+scalar String
+```
+
+
+
+
+### Returned by
+
+[`hello`](/docs/schemas/fluss/queries/hello)  <Badge class="secondary" text="query"/><Bullet />[`void`](/docs/schemas/fluss/queries/void)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`alog`](/docs/schemas/fluss/mutations/alog)  <Badge class="secondary" text="mutation"/><Bullet />[`ArgNode`](/docs/schemas/fluss/objects/arg-node)  <Badge class="secondary" text="object"/><Bullet />[`ArgPort`](/docs/schemas/fluss/objects/arg-port)  <Badge class="secondary" text="object"/><Bullet />[`ArgPortChild`](/docs/schemas/fluss/objects/arg-port-child)  <Badge class="secondary" text="object"/><Bullet />[`ArgPortInput`](/docs/schemas/fluss/inputs/arg-port-input)  <Badge class="secondary" text="input"/><Bullet />[`ArkitektNode`](/docs/schemas/fluss/objects/arkitekt-node)  <Badge class="secondary" text="object"/><Bullet />[`ChildPortInput`](/docs/schemas/fluss/inputs/child-port-input)  <Badge class="secondary" text="input"/><Bullet />[`Choice`](/docs/schemas/fluss/objects/choice)  <Badge class="secondary" text="object"/><Bullet />[`ChoiceInput`](/docs/schemas/fluss/inputs/choice-input)  <Badge class="secondary" text="input"/><Bullet />[`Diagram`](/docs/schemas/fluss/objects/diagram)  <Badge class="secondary" text="object"/><Bullet />[`diagrams`](/docs/schemas/fluss/queries/diagrams)  <Badge class="secondary" text="query"/><Bullet />[`drawvanilla`](/docs/schemas/fluss/mutations/drawvanilla)  <Badge class="secondary" text="mutation"/><Bullet />[`EdgeInput`](/docs/schemas/fluss/inputs/edge-input)  <Badge class="secondary" text="input"/><Bullet />[`FancyEdge`](/docs/schemas/fluss/objects/fancy-edge)  <Badge class="secondary" text="object"/><Bullet />[`Flow`](/docs/schemas/fluss/objects/flow)  <Badge class="secondary" text="object"/><Bullet />[`FlowEdge`](/docs/schemas/fluss/interfaces/flow-edge)  <Badge class="secondary" text="interface"/><Bullet />[`FlowNode`](/docs/schemas/fluss/interfaces/flow-node)  <Badge class="secondary" text="interface"/><Bullet />[`FlowNodeCommons`](/docs/schemas/fluss/interfaces/flow-node-commons)  <Badge class="secondary" text="interface"/><Bullet />[`flows`](/docs/schemas/fluss/queries/flows)  <Badge class="secondary" text="query"/><Bullet />[`Global`](/docs/schemas/fluss/objects/global)  <Badge class="secondary" text="object"/><Bullet />[`GlobalInput`](/docs/schemas/fluss/inputs/global-input)  <Badge class="secondary" text="input"/><Bullet />[`KwargNode`](/docs/schemas/fluss/objects/kwarg-node)  <Badge class="secondary" text="object"/><Bullet />[`LabeledEdge`](/docs/schemas/fluss/objects/labeled-edge)  <Badge class="secondary" text="object"/><Bullet />[`NodeInput`](/docs/schemas/fluss/inputs/node-input)  <Badge class="secondary" text="input"/><Bullet />[`ReactiveNode`](/docs/schemas/fluss/objects/reactive-node)  <Badge class="secondary" text="object"/><Bullet />[`ReactiveTemplate`](/docs/schemas/fluss/objects/reactive-template)  <Badge class="secondary" text="object"/><Bullet />[`reactivetemplates`](/docs/schemas/fluss/queries/reactivetemplates)  <Badge class="secondary" text="query"/><Bullet />[`ReturnNode`](/docs/schemas/fluss/objects/return-node)  <Badge class="secondary" text="object"/><Bullet />[`ReturnPort`](/docs/schemas/fluss/objects/return-port)  <Badge class="secondary" text="object"/><Bullet />[`ReturnPortChild`](/docs/schemas/fluss/objects/return-port-child)  <Badge class="secondary" text="object"/><Bullet />[`ReturnPortInput`](/docs/schemas/fluss/inputs/return-port-input)  <Badge class="secondary" text="input"/><Bullet />[`ReturnWidget`](/docs/schemas/fluss/objects/return-widget)  <Badge class="secondary" text="object"/><Bullet />[`ReturnWidgetInput`](/docs/schemas/fluss/inputs/return-widget-input)  <Badge class="secondary" text="input"/><Bullet />[`Run`](/docs/schemas/fluss/objects/run)  <Badge class="secondary" text="object"/><Bullet />[`RunEvent`](/docs/schemas/fluss/objects/run-event)  <Badge class="secondary" text="object"/><Bullet />[`RunLog`](/docs/schemas/fluss/objects/run-log)  <Badge class="secondary" text="object"/><Bullet />[`Snapshot`](/docs/schemas/fluss/objects/snapshot)  <Badge class="secondary" text="object"/><Bullet />[`StreamItem`](/docs/schemas/fluss/objects/stream-item)  <Badge class="secondary" text="object"/><Bullet />[`StreamItemChild`](/docs/schemas/fluss/objects/stream-item-child)  <Badge class="secondary" text="object"/><Bullet />[`StreamItemChildInput`](/docs/schemas/fluss/inputs/stream-item-child-input)  <Badge class="secondary" text="input"/><Bullet />[`StreamItemInput`](/docs/schemas/fluss/inputs/stream-item-input)  <Badge class="secondary" text="input"/><Bullet />[`track`](/docs/schemas/fluss/mutations/track)  <Badge class="secondary" text="mutation"/><Bullet />[`User`](/docs/schemas/fluss/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Widget`](/docs/schemas/fluss/objects/widget)  <Badge class="secondary" text="object"/><Bullet />[`WidgetInput`](/docs/schemas/fluss/inputs/widget-input)  <Badge class="secondary" text="input"/>
+
+
+

@@ -1,0 +1,57 @@
+---
+id: change-permissions
+title: changePermissions
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Creates a Sample
+
+```graphql
+changePermissions(
+  groupAssignments: [GroupAssignmentInput]
+  object: ID!
+  type: SharableModels!
+  userAssignments: [UserAssignmentInput]
+): ChangePermissionsResult
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>changePermissions.<b>groupAssignments</b></code>](#)<Bullet />[`[GroupAssignmentInput]`](/docs/schemas/mikro/inputs/group-assignment-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>changePermissions.<b>object</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The Representationss this sROI belongs to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>changePermissions.<b>type</b></code>](#)<Bullet />[`SharableModels!`](/docs/schemas/mikro/enums/sharable-models) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>changePermissions.<b>userAssignments</b></code>](#)<Bullet />[`[UserAssignmentInput]`](/docs/schemas/mikro/inputs/user-assignment-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`ChangePermissionsResult`](/docs/schemas/mikro/objects/change-permissions-result) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

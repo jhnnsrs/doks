@@ -1,0 +1,85 @@
+---
+id: omero
+title: Omero
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Omero {
+  id: ID!
+  representation: Representation!
+  planes: [Plane]
+  channels: [Channel]
+  scale: [Float]
+  physicalSize: PhysicalSize
+  acquisitionDate: DateTime
+  objectiveSettings: ObjectiveSettings
+  imagingEnvironment: ImagingEnvironment
+  instrument: Instrument
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>representation</b></code>](#)<Bullet />[`Representation!`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>planes</b></code>](#)<Bullet />[`[Plane]`](/docs/schemas/mikro/objects/plane) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>channels</b></code>](#)<Bullet />[`[Channel]`](/docs/schemas/mikro/objects/channel) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>scale</b></code>](#)<Bullet />[`[Float]`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>physicalSize</b></code>](#)<Bullet />[`PhysicalSize`](/docs/schemas/mikro/objects/physical-size) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>acquisitionDate</b></code>](#)<Bullet />[`DateTime`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>objectiveSettings</b></code>](#)<Bullet />[`ObjectiveSettings`](/docs/schemas/mikro/objects/objective-settings) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>imagingEnvironment</b></code>](#)<Bullet />[`ImagingEnvironment`](/docs/schemas/mikro/objects/imaging-environment) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Omero.<b>instrument</b></code>](#)<Bullet />[`Instrument`](/docs/schemas/mikro/objects/instrument) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Member of
+
+[`Instrument`](/docs/schemas/mikro/objects/instrument)  <Badge class="secondary" text="object"/><Bullet />[`Representation`](/docs/schemas/mikro/objects/representation)  <Badge class="secondary" text="object"/>
+
+
+

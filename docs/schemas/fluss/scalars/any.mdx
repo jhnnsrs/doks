@@ -1,0 +1,32 @@
+---
+id: any
+title: Any
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Any any field
+
+```graphql
+scalar Any
+```
+
+
+
+
+### Member of
+
+[`ArgPort`](/docs/schemas/fluss/objects/arg-port)  <Badge class="secondary" text="object"/><Bullet />[`ArgPortInput`](/docs/schemas/fluss/inputs/arg-port-input)  <Badge class="secondary" text="input"/><Bullet />[`Choice`](/docs/schemas/fluss/objects/choice)  <Badge class="secondary" text="object"/><Bullet />[`ChoiceInput`](/docs/schemas/fluss/inputs/choice-input)  <Badge class="secondary" text="input"/>
+
+
+

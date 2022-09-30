@@ -1,0 +1,80 @@
+---
+id: reactive-implementation-model-input
+title: ReactiveImplementationModelInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An enumeration.
+
+```graphql
+enum ReactiveImplementationModelInput {
+  ZIP
+  COMBINELATEST
+  WITHLATEST
+  BUFFER_COMPLETE
+  BUFFER_UNTIL
+  CHUNK
+  SPLIT
+  OMIT
+  TO_LIST
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>ZIP</b></code>](#) 
+> ZIP (Zip the data)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>COMBINELATEST</b></code>](#) 
+> COMBINELATEST (Combine values with latest value from each stream)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>WITHLATEST</b></code>](#) 
+> WITHLATEST (Combine a leading value with the latest value)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>BUFFER_COMPLETE</b></code>](#) 
+> BUFFER_COMPLETE (Buffer values until complete is retrieved)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>BUFFER_UNTIL</b></code>](#) 
+> BUFFER_UNTIL (Buffer values until signal is send)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>CHUNK</b></code>](#) 
+> CHUNK (Chunk the data)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>SPLIT</b></code>](#) 
+> SPLIT (Split the data)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>OMIT</b></code>](#) 
+> OMIT (Omit the data)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactiveImplementationModelInput.<b>TO_LIST</b></code>](#) 
+> TO_LIST (Convert to list)
+> 
+
+
+
+### Member of
+
+[`NodeInput`](/docs/schemas/fluss/inputs/node-input)  <Badge class="secondary" text="input"/><Bullet />[`ReactiveNode`](/docs/schemas/fluss/objects/reactive-node)  <Badge class="secondary" text="object"/><Bullet />[`ReactiveTemplate`](/docs/schemas/fluss/objects/reactive-template)  <Badge class="secondary" text="object"/>
+
+
+

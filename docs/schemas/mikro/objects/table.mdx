@@ -1,0 +1,127 @@
+---
+id: table
+title: Table
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Table {
+  id: ID!
+  representation: Representation
+  sample: Sample
+  experiment: Experiment
+  name: String!
+  columns(
+  only: [String]
+): [Column]
+  store: Parquet
+  pinnedBy: [User!]!
+  createdAt: DateTime!
+  creator: User
+  tags: [String]
+  query(
+  only: [String]
+  offset: Int
+  limit: Int
+  query: String
+): [GenericScalar]
+  pinned: Boolean
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>id</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>representation</b></code>](#)<Bullet />[`Representation`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>sample</b></code>](#)<Bullet />[`Sample`](/docs/schemas/mikro/objects/sample) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>experiment</b></code>](#)<Bullet />[`Experiment`](/docs/schemas/mikro/objects/experiment) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>name</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>columns</b></code>](#)<Bullet />[`[Column]`](/docs/schemas/mikro/objects/column) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Columns Data
+> ##### [<code style={{ fontWeight: 'normal' }}>Table.columns.<b>only</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Columns you want to select
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>store</b></code>](#)<Bullet />[`Parquet`](/docs/schemas/mikro/scalars/parquet) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>pinnedBy</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>creator</b></code>](#)<Bullet />[`User`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> A comma-separated list of tags.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>query</b></code>](#)<Bullet />[`[GenericScalar]`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> List of Records
+> ##### [<code style={{ fontWeight: 'normal' }}>Table.query.<b>only</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Columns you want to select
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Table.query.<b>offset</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> The Offset for the query
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Table.query.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
+> The Offset for the query
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Table.query.<b>query</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
+> The Query for the query
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Table.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`createTable`](/docs/schemas/mikro/mutations/create-table)  <Badge class="secondary" text="mutation"/><Bullet />[`fromDf`](/docs/schemas/mikro/mutations/from-df)  <Badge class="secondary" text="mutation"/><Bullet />[`mytables`](/docs/schemas/mikro/queries/mytables)  <Badge class="secondary" text="query"/><Bullet />[`table`](/docs/schemas/mikro/queries/table)  <Badge class="secondary" text="query"/><Bullet />[`tables`](/docs/schemas/mikro/queries/tables)  <Badge class="secondary" text="query"/><Bullet />[`updateTable`](/docs/schemas/mikro/mutations/update-table)  <Badge class="secondary" text="mutation"/>
+
+### Member of
+
+[`Experiment`](/docs/schemas/mikro/objects/experiment)  <Badge class="secondary" text="object"/><Bullet />[`Representation`](/docs/schemas/mikro/objects/representation)  <Badge class="secondary" text="object"/><Bullet />[`Sample`](/docs/schemas/mikro/objects/sample)  <Badge class="secondary" text="object"/><Bullet />[`TablesEvent`](/docs/schemas/mikro/objects/tables-event)  <Badge class="secondary" text="object"/>
+
+
+

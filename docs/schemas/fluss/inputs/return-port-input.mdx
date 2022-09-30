@@ -1,0 +1,80 @@
+---
+id: return-port-input
+title: ReturnPortInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input ReturnPortInput {
+  identifier: String
+  key: String!
+  name: String
+  label: String
+  kind: StreamKind!
+  description: String
+  child: ChildPortInput
+  widget: ReturnWidgetInput
+  nullable: Boolean!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>identifier</b></code>](#)<Bullet />[`String`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="scalar"/>
+> The identifier
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>key</b></code>](#)<Bullet />[`String!`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The key of the arg
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="scalar"/>
+> The name of this argument
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>label</b></code>](#)<Bullet />[`String`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="scalar"/>
+> The name of this argument
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>kind</b></code>](#)<Bullet />[`StreamKind!`](/docs/schemas/fluss/enums/stream-kind) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> The type of this argument
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>description</b></code>](#)<Bullet />[`String`](/docs/schemas/fluss/scalars/string) <Badge class="secondary" text="scalar"/>
+> The description of this argument
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>child</b></code>](#)<Bullet />[`ChildPortInput`](/docs/schemas/fluss/inputs/child-port-input) <Badge class="secondary" text="input"/>
+> The child of this argument
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>widget</b></code>](#)<Bullet />[`ReturnWidgetInput`](/docs/schemas/fluss/inputs/return-widget-input) <Badge class="secondary" text="input"/>
+> The child of this argument
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReturnPortInput.<b>nullable</b></code>](#)<Bullet />[`Boolean!`](/docs/schemas/fluss/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> Is this argument nullable
+> 
+
+
+
+### Member of
+
+[`GraphInput`](/docs/schemas/fluss/inputs/graph-input)  <Badge class="secondary" text="input"/>
+
+
+

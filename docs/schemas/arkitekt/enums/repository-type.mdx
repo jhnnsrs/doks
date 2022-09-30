@@ -1,0 +1,45 @@
+---
+id: repository-type
+title: RepositoryType
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An enumeration.
+
+```graphql
+enum RepositoryType {
+  APP
+  MIRROR
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>RepositoryType.<b>APP</b></code>](#) 
+> Repository that is hosted by an App
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>RepositoryType.<b>MIRROR</b></code>](#) 
+> Repository mirrors online Repository
+> 
+
+
+
+### Member of
+
+[`AppRepository`](/docs/schemas/arkitekt/objects/app-repository)  <Badge class="secondary" text="object"/><Bullet />[`MirrorRepository`](/docs/schemas/arkitekt/objects/mirror-repository)  <Badge class="secondary" text="object"/>
+
+
+
