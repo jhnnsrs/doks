@@ -15,7 +15,17 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Creates a Sample
+Creates a Label
+    
+    This mutation creates a Label and returns the created Label.
+    We require a reference to the image pixel value that the label belongs to.
+    (Labels can be created for any pixel in an image, no matter if this image
+    is a mask or not). However labels can only be created for pixels that are
+    integer values.
+
+    
+
+    
 
 ```graphql
 createLabel(
@@ -30,11 +40,11 @@ createLabel(
 ### Arguments
 
 #### [<code style={{ fontWeight: 'normal' }}>createLabel.<b>creator</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
-> The creator of this feature
+> The creator of this label
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>createLabel.<b>instance</b></code>](#)<Bullet />[`Int!`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The Representation this ROI belongs to
+> The instance this Label belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>createLabel.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
@@ -42,13 +52,23 @@ createLabel(
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>createLabel.<b>representation</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The Representation this ROI belongs to
+> The Representation this Label belongs to
 > 
 
 ### Type
 
 #### [`Label`](/docs/schemas/mikro/objects/label) <Badge class="secondary" text="object"/>
-> 
+> A Label is a trough model for image and features.
+    
+    Its map an instance value of a representation
+    (e.g. a pixel value of a segmentation mask) to a set of corresponding features of the segmented
+    class instance.
+
+    There can only be one label per representation and class instance. You can then attach
+    features to the label.
+    
+    
+    
 > 
 
 

@@ -63,7 +63,18 @@ fromDf(
 ### Type
 
 #### [`Table`](/docs/schemas/mikro/objects/table) <Badge class="secondary" text="object"/>
-> 
+>  A Table is a collection of tabular data.
+
+    It provides a way to store data in a tabular format and associate it with a Representation,
+    Sample or Experiment. It is a way to store data that might be to large to store in a
+    Feature or Metric on this Experiments. Or it might be data that is not easily represented
+    as a Feature or Metric.
+
+    Tables can be easily created from a pandas DataFrame and can be converted to a pandas DataFrame.
+    Its columns are defined by the columns of the DataFrame.
+
+    
+    
 > 
 
 

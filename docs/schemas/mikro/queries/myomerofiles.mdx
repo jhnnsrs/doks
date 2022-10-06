@@ -15,7 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-My samples return all of the users samples attached to the current user
+My Omerofiles runs a fast query on the database to return all
+    Omerofile that the user has created. This query is faster than
+    the `omerofiles` query, but it does not return all OmeroFile that
+    the user has access to.
 
 ```graphql
 myomerofiles(

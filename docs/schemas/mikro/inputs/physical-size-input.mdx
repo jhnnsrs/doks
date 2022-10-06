@@ -15,7 +15,17 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+Physical size of the image 
+
+Each dimensions of the image has a physical size. This is the size of the
+pixel in the image. The physical size is given in micrometers on a PIXEL
+basis. This means that the physical size of the image is the size of the    
+pixel in the image * the number of pixels in the image. For example, if 
+the image is 1000x1000 pixels and the physical size of the image is 3 (x params) x 3 (y params),
+micrometer, the physical size of the image is 3000x3000 micrometer. If the image
+
+The t dimension is given in ms, since the time is given in ms.
+The C dimension is given in nm, since the wavelength is given in nm.
 
 ```graphql
 input PhysicalSizeInput {
@@ -31,23 +41,23 @@ input PhysicalSizeInput {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>PhysicalSizeInput.<b>x</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> Physical size of *one* Pixel in the x dimension (in µm)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PhysicalSizeInput.<b>y</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> Physical size of *one* Pixel in the t dimension (in µm)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PhysicalSizeInput.<b>z</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> Physical size of *one* Pixel in the z dimension (in µm)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PhysicalSizeInput.<b>t</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> Physical size of *one* Pixel in the t dimension (in ms)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PhysicalSizeInput.<b>c</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> Physical size of *one* Pixel in the c dimension (in nm)
 > 
 
 

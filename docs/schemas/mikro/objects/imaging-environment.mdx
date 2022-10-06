@@ -15,11 +15,13 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+The imaging environment during the acquisition 
+
+Follows the OME model for imaging environment
 
 ```graphql
 type ImagingEnvironment {
-  airPressure: Float
+  airPessure: Float
   co2Percent: Float
   humidity: Float
   temperature: Float
@@ -30,24 +32,24 @@ type ImagingEnvironment {
 
 ### Fields
 
-#### [<code style={{ fontWeight: 'normal' }}>ImagingEnvironment.<b>airPressure</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+#### [<code style={{ fontWeight: 'normal' }}>ImagingEnvironment.<b>airPessure</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
+> The air pressure during the acquisition
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>ImagingEnvironment.<b>co2Percent</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The CO2 percentage in the environment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>ImagingEnvironment.<b>humidity</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The humidity of the imaging environment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>ImagingEnvironment.<b>temperature</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The temperature of the imaging environment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>ImagingEnvironment.<b>map</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
-> 
+> A map of the imaging environment. Key value based
 > 
 
 

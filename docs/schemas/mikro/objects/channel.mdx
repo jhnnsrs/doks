@@ -15,7 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A channel in an image
+
+Channels can be highly variable in their properties. This class is a
+representation of the most common properties of a channel.
 
 ```graphql
 type Channel {
@@ -31,23 +34,23 @@ type Channel {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Channel.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The name of the channel
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Channel.<b>emmissionWavelength</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The emmission wavelength of the fluorophore in nm
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Channel.<b>excitationWavelength</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The excitation wavelength of the fluorophore in nm
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Channel.<b>acquisitionMode</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The acquisition mode of the channel
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Channel.<b>color</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The default color for the channel (might be ommited by the rendered)
 > 
 
 

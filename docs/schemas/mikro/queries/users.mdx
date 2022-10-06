@@ -38,7 +38,19 @@ users(
 ### Type
 
 #### [`User`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="object"/>
-> 
+> User
+
+This object represents a user in the system. Users are used to
+control access to different parts of the system. Users are assigned 
+to groups. A user has access to a part of the system if the user is
+a member of a group that has the permission assigned to it.
+
+Users can be be "creator" of objects. This means that the user has
+created the object. This is used to control access to objects. A user
+can only access objects that they have created, or objects that they
+have access to through a group that they are a member of.
+
+See the documentation for "Object Level Permissions" for more information.
 > 
 
 

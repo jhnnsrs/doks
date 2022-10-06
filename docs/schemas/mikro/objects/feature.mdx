@@ -15,7 +15,20 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+ A Feature is a numerical key value pair that is attached to a Label.
+     
+    You can model it for example as a key value pair of a class instance of a segmentation mask.
+    Representation -&#x003E; Label0 -&#x003E; Feature0
+                             -&#x003E; Feature1
+                   -&#x003E; Label1 -&#x003E; Feature0 
+
+    Features can be used to store any numerical value that is attached to a class instance.
+    THere can only ever be one key per label. If you want to store multiple values for a key, you can
+    store them as a list in the value field.
+
+    Feature are analogous to metrics on a representation, but for a specific class instance (Label)
+    
+    
 
 ```graphql
 type Feature {
@@ -35,15 +48,15 @@ type Feature {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Feature.<b>creator</b></code>](#)<Bullet />[`User`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="object"/>
-> 
+> The user that created the Feature
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Feature.<b>label</b></code>](#)<Bullet />[`Label`](/docs/schemas/mikro/objects/label) <Badge class="secondary" text="object"/>
-> 
+> The Label this Feature belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Feature.<b>key</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The sKesyss
+> The key of the feature
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Feature.<b>value</b></code>](#)<Bullet />[`FeatureValue`](/docs/schemas/mikro/scalars/feature-value) <Badge class="secondary" text="scalar"/>

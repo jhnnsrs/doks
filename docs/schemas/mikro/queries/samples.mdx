@@ -16,6 +16,13 @@ export const Badge = (props) => <><span class={'badge badge--' + props.class}>{p
 
 
 All Samples
+    
+    This query returns all Samples that are stored on the platform
+    depending on the user's permissions. Generally, this query will return
+    all Samples that the user has access to. If the user is an amdin
+    or superuser, all Samples will be returned.
+    
+    
 
 ```graphql
 samples(

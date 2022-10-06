@@ -15,7 +15,13 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A plot is a template to generate a graph
+
+Its store a PlotQL query and a list of variables that can be used in the
+query. The variables are stored as a JSON object. The variables are
+validated against the query before the query is executed.
+
+This query then returns a graph that can be rendered in the frontend.
 
 ```graphql
 type Plot {
@@ -37,27 +43,27 @@ type Plot {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Plot.<b>name</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The name of the plot
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Plot.<b>description</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> A description of the plot
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Plot.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> When was this plot created
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Plot.<b>updatedAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> When was this plot last updated
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Plot.<b>query</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The PlotQL query (see documentation for PlotQL)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Plot.<b>creator</b></code>](#)<Bullet />[`User!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The user who created this plot
 > 
 
 

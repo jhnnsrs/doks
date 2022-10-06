@@ -15,7 +15,12 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Get a single representation by ID
+Get a random Representation
+    
+    Gets a random Representation from the database. This is used for
+    testing purposes
+    
+    
 
 ```graphql
 randomRepresentation: Representation
@@ -25,10 +30,37 @@ randomRepresentation: Representation
 ### Type
 
 #### [`Representation`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="object"/>
-> A Representation is a multi-dimensional Array that can do what ever it wants
+> A Representation is 5-dimensional representation of an image
+
+    Mikro stores each image as a 5-dimensional representation. The dimensions are:
+    - t: time
+    - c: channel
+    - z: z-stack
+    - x: x-dimension
+    - y: y-dimension
+
+    This ensures a unified api for all images, regardless of their original dimensions. Another main
+    determining factor for a representation is its variety:
+    A representation can be a raw image representating voxels (VOXEL)
+    or a segmentation mask representing instances of a class. (MASK)
+    It can also representate a human perception of the image (RGB) or a human perception of the mask (RGBMASK)
+
+    # Meta
+
+    Meta information is stored in the omero field which gives access to the omero-meta data. Refer to the omero documentation for more information.
 
 
-@elements/rep:latest
+    #Origins and Derivations
+
+    Images can be filtered, which means that a new representation is created from the other (original) representations. This new representation is then linked to the original representations. This way, we can always trace back to the original representation.
+    Both are encapsulaed in the origins and derived fields.
+
+    Representations belong to *one* sample. Every transaction to our image data is still part of the original acuqistion, so also filtered images are refering back to the sample
+    Each iamge has also a name, which is used to identify the image. The name is unique within a sample.
+    File and Rois that are used to create images are saved in the file origins and roi origins repectively.
+
+
+    
 > 
 
 

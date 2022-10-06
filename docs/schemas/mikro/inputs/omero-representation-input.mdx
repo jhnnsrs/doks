@@ -15,7 +15,12 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+The Omero Meta Data of an Image
+
+Follows closely the omexml model. With a few alterations:
+- The data model of the datasets and experimenters is
+part of the mikro datamodel and are not accessed here.
+- Some parameters are ommited as they are not really used
 
 ```graphql
 input OmeroRepresentationInput {

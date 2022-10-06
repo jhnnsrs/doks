@@ -15,7 +15,16 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+Comments for a specific object
+    
+    This query returns all comments for a specific object. The object is
+    specified by the `model` and `id` arguments. The `model` argument is
+    a string that is the name of the model. The `id` argument is the id of
+    the object.
+
+    You can only query for comments for objects that you have access to.
+    
+    
 
 ```graphql
 commentsfor(
@@ -38,7 +47,10 @@ commentsfor(
 ### Type
 
 #### [`Comment`](/docs/schemas/mikro/objects/comment) <Badge class="secondary" text="object"/>
-> 
+> A comment
+
+A comment is a user generated comment on a commentable object. A comment can be a reply to another comment or a top level comment.
+Comments can be nested to any depth. A comment can be edited and deleted by the user that created it.
 > 
 
 

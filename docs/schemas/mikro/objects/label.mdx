@@ -15,7 +15,17 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A Label is a trough model for image and features.
+    
+    Its map an instance value of a representation
+    (e.g. a pixel value of a segmentation mask) to a set of corresponding features of the segmented
+    class instance.
+
+    There can only be one label per representation and class instance. You can then attach
+    features to the label.
+    
+    
+    
 
 ```graphql
 type Label {
@@ -50,27 +60,27 @@ type Label {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>instance</b></code>](#)<Bullet />[`Int!`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The instance value of the representation (pixel value). Must be a value of the image array
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>name</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The name of the instance
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The time the Label was created
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>creator</b></code>](#)<Bullet />[`User!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The user that created the Label
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>representation</b></code>](#)<Bullet />[`Representation`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="object"/>
-> 
+> The Representation this Label instance belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>pinnedBy</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The users that pinned this Label
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
@@ -80,7 +90,7 @@ type Label {
 #### [<code style={{ fontWeight: 'normal' }}>Label.<b>features</b></code>](#)<Bullet />[`[Feature]`](/docs/schemas/mikro/objects/feature) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
 > Features attached to this Label
 > ##### [<code style={{ fontWeight: 'normal' }}>Label.features.<b>label</b></code>](#)<Bullet />[`ID`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="scalar"/>
-> 
+> The corresponding label that you want to filter by
 > 
 
 ##### [<code style={{ fontWeight: 'normal' }}>Label.features.<b>creator</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>

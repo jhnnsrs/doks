@@ -15,7 +15,17 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-All Samples
+All Experiments
+    
+    This query returns all Experiments that are stored on the platform
+    depending on the user's permissions. Generally, this query will return
+    all Experiments that the user has access to. If the user is an amdin
+    or superuser, all Experiments will be returned.
+
+    If you want to retrieve only the Experiments that you have created,
+    use the `myExperiments` query.
+    
+    
 
 ```graphql
 experiments(
@@ -73,7 +83,19 @@ experiments(
 ### Type
 
 #### [`Experiment`](/docs/schemas/mikro/objects/experiment) <Badge class="secondary" text="object"/>
-> A Representation is a multi-dimensional Array that can do what ever it wants @elements/experiment
+> 
+    An experiment is a collection of samples and their representations.
+    It mimics the concept of an experiment in the lab and is the top level
+    object in the data model.
+
+    You can use the experiment to group samples and representations likewise
+    to how you would group files into folders in a file system.
+
+    
+    
+    
+    
+    
 > 
 
 

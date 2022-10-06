@@ -15,7 +15,14 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-A Representation of a Metric Value
+A Metric Value
+
+This scalar ensures serializaiton of metric values. Metric values
+can be of different types, such as int, float, string, datetime, etc.
+
+However we impose a few rules on the metric values:
+- The value must be a scalar
+- The value must be a scalar that can be serialized to JSON
 
 ```graphql
 scalar MetricValue

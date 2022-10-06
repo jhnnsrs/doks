@@ -15,7 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A comment
+
+A comment is a user generated comment on a commentable object. A comment can be a reply to another comment or a top level comment.
+Comments can be nested to any depth. A comment can be edited and deleted by the user that created it.
 
 ```graphql
 type Comment {
@@ -43,7 +46,7 @@ type Comment {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Comment.<b>contentType</b></code>](#)<Bullet />[`CommentableModels`](/docs/schemas/mikro/enums/commentable-models) <Badge class="secondary" text="enum"/>
-> 
+> The content type of the commentable object
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Comment.<b>objectId</b></code>](#)<Bullet />[`Int!`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
@@ -67,7 +70,7 @@ type Comment {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Comment.<b>descendents</b></code>](#)<Bullet />[`[Descendent]`](/docs/schemas/mikro/interfaces/descendent) <Badge class="secondary" text="list"/> <Badge class="secondary" text="interface"/>
-> 
+> The descendents of the comment (this referes to the Comment Tree)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Comment.<b>mentions</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
@@ -75,7 +78,7 @@ type Comment {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Comment.<b>children</b></code>](#)<Bullet />[`[Comment]`](/docs/schemas/mikro/objects/comment) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> Comments that are replies to this comment
 > ##### [<code style={{ fontWeight: 'normal' }}>Comment.children.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
 > How many children to return
 > 

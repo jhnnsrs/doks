@@ -15,7 +15,13 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-All Samples
+All Tags
+    
+    Returns all Tags that are stored on the platform
+    depending on the user's permissions. Generally, this query will return
+    all Tags that the user has access to. If the user is an amdin
+    or superuser, all Tags will be returned.
+    
 
 ```graphql
 tags(

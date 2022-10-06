@@ -15,7 +15,12 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-All represetations
+All Instruments
+    
+    This query returns all Instruments that are stored on the platform
+    depending on the user's permissions. Generally, this query will return
+    all Instruments that the user has access to. If the user is an amdin
+    or superuser, all Instruments will be returned.
 
 ```graphql
 instruments(
@@ -43,7 +48,7 @@ instruments(
 ### Type
 
 #### [`Instrument`](/docs/schemas/mikro/objects/instrument) <Badge class="secondary" text="object"/>
-> 
+> Instrument(id, name, detectors, dichroics, filters, lot_number, manufacturer, model, serial_number)
 > 
 
 

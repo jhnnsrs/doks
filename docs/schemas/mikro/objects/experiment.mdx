@@ -15,12 +15,23 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-A Representation is a multi-dimensional Array that can do what ever it wants @elements/experiment
+
+    An experiment is a collection of samples and their representations.
+    It mimics the concept of an experiment in the lab and is the top level
+    object in the data model.
+
+    You can use the experiment to group samples and representations likewise
+    to how you would group files into folders in a file system.
+
+    
+    
+    
+    
+    
 
 ```graphql
 type Experiment {
   id: ID!
-  meta: GenericScalar
   name: String!
   description: String
   descriptionLong: String
@@ -58,44 +69,40 @@ type Experiment {
 > 
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>meta</b></code>](#)<Bullet />[`GenericScalar`](/docs/schemas/mikro/scalars/generic-scalar) <Badge class="secondary" text="scalar"/>
-> 
-> 
-
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>name</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The name of the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>description</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> A short description of the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>descriptionLong</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> A long description of the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>linkedPaper</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> A link to a paper describing the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>image</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> An image to be used as a banner for the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The time the experiment was created
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>creator</b></code>](#)<Bullet />[`User`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="object"/>
-> 
+> The user that created the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>pinnedBy</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The users that have pinned the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
-> A comma-separated list of tags.
+> Tags for the experiment
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>samples</b></code>](#)<Bullet />[`[Sample]`](/docs/schemas/mikro/objects/sample) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
@@ -157,7 +164,7 @@ type Experiment {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>tables</b></code>](#)<Bullet />[`[Table!]!`](/docs/schemas/mikro/objects/table) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The Experiment this Table belongs to.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Experiment.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>

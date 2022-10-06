@@ -15,7 +15,18 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+ A Table is a collection of tabular data.
+
+    It provides a way to store data in a tabular format and associate it with a Representation,
+    Sample or Experiment. It is a way to store data that might be to large to store in a
+    Feature or Metric on this Experiments. Or it might be data that is not easily represented
+    as a Feature or Metric.
+
+    Tables can be easily created from a pandas DataFrame and can be converted to a pandas DataFrame.
+    Its columns are defined by the columns of the DataFrame.
+
+    
+    
 
 ```graphql
 type Table {
@@ -50,15 +61,15 @@ type Table {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>representation</b></code>](#)<Bullet />[`Representation`](/docs/schemas/mikro/objects/representation) <Badge class="secondary" text="object"/>
-> 
+> The Representation this Table belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>sample</b></code>](#)<Bullet />[`Sample`](/docs/schemas/mikro/objects/sample) <Badge class="secondary" text="object"/>
-> 
+> Sample this table belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>experiment</b></code>](#)<Bullet />[`Experiment`](/docs/schemas/mikro/objects/experiment) <Badge class="secondary" text="object"/>
-> 
+> The Experiment this Table belongs to.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>name</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
@@ -72,7 +83,7 @@ type Table {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>store</b></code>](#)<Bullet />[`Parquet`](/docs/schemas/mikro/scalars/parquet) <Badge class="secondary" text="scalar"/>
-> 
+> The parquet store for the table
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>pinnedBy</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
@@ -80,11 +91,11 @@ type Table {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> When the Table was created
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>creator</b></code>](#)<Bullet />[`User`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="object"/>
-> 
+> The creator of the Table
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
@@ -102,7 +113,7 @@ type Table {
 > 
 
 ##### [<code style={{ fontWeight: 'normal' }}>Table.query.<b>limit</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
-> The Offset for the query
+> The Limit for the query
 > 
 
 ##### [<code style={{ fontWeight: 'normal' }}>Table.query.<b>query</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
@@ -110,7 +121,7 @@ type Table {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Table.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
-> 
+> Is the table pinned by the active user
 > 
 
 

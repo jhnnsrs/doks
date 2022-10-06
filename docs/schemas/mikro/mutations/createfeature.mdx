@@ -15,7 +15,14 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Creates a Sample
+Creates a Feature
+    
+    This mutation creates a Feature and returns the created Feature.
+    We require a reference to the label that the feature belongs to.
+    As well as the key and value of the feature.
+    
+    There can be multiple features with the same label, but only one feature per key
+    per label
 
 ```graphql
 createfeature(
@@ -38,17 +45,30 @@ createfeature(
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>createfeature.<b>label</b></code>](#)<Bullet />[`ID!`](/docs/schemas/mikro/scalars/id) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The Representation this ROI belongs to
+> The Label this Feature belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>createfeature.<b>value</b></code>](#)<Bullet />[`FeatureValue!`](/docs/schemas/mikro/scalars/feature-value) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The size
+> The value of the feature
 > 
 
 ### Type
 
 #### [`Feature`](/docs/schemas/mikro/objects/feature) <Badge class="secondary" text="object"/>
-> 
+>  A Feature is a numerical key value pair that is attached to a Label.
+     
+    You can model it for example as a key value pair of a class instance of a segmentation mask.
+    Representation -&#x003E; Label0 -&#x003E; Feature0
+                             -&#x003E; Feature1
+                   -&#x003E; Label1 -&#x003E; Feature0 
+
+    Features can be used to store any numerical value that is attached to a class instance.
+    THere can only ever be one key per label. If you want to store multiple values for a key, you can
+    store them as a list in the value field.
+
+    Feature are analogous to metrics on a representation, but for a specific class instance (Label)
+    
+    
 > 
 
 

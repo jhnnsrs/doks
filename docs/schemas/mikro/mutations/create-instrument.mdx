@@ -15,7 +15,11 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Creates a Representation
+Creates an Instrument
+    
+    This mutation creates an Instrument and returns the created Instrument.
+    The serial number is required and the manufacturer is inferred from the serial number.
+    
 
 ```graphql
 createInstrument(
@@ -68,7 +72,7 @@ createInstrument(
 ### Type
 
 #### [`Instrument`](/docs/schemas/mikro/objects/instrument) <Badge class="secondary" text="object"/>
-> 
+> Instrument(id, name, detectors, dichroics, filters, lot_number, manufacturer, model, serial_number)
 > 
 
 

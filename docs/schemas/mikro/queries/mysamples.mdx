@@ -15,7 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-My samples return all of the users samples attached to the current user
+My Samples runs a fast query on the database to return all
+    Samples that the user has *created*. This query is faster than
+    the `samples` query, but it does not return all Samples that
+    the user has access to.
 
 ```graphql
 mysamples(

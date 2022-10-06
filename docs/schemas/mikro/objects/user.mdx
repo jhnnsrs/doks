@@ -15,7 +15,19 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+User
+
+This object represents a user in the system. Users are used to
+control access to different parts of the system. Users are assigned 
+to groups. A user has access to a part of the system if the user is
+a member of a group that has the permission assigned to it.
+
+Users can be be "creator" of objects. This means that the user has
+created the object. This is used to control access to objects. A user
+can only access objects that they have created, or objects that they
+have access to through a group that they are a member of.
+
+See the documentation for "Object Level Permissions" for more information.
 
 ```graphql
 type User {
@@ -57,7 +69,7 @@ type User {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>color</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The color of the user
+> The prefered color of the user
 > 
 
 

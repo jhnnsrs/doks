@@ -31,18 +31,20 @@ const flussConf = {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Arkitekt",
+  title: "Doks",
   tagline: "streaming analysis for microscopy",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://jhnnsrs.github.io/",
+  baseUrl: "/doks/",
+  trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.svg",
+  themes: ['@docusaurus/theme-live-codeblock'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "jhnnsrs", // Usually your GitHub org/user name.
+  projectName: "doks", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -112,9 +114,9 @@ const config = {
         // respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Arkitekt",
+        title: "Doks",
         logo: {
-          alt: "Arkitekt Logo",
+          alt: "Doks Logo",
           src: "img/favicon.svg",
         },
         items: [
@@ -126,7 +128,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/jhnnsrs/doks",
             label: "GitHub",
             position: "right",
           },
@@ -149,15 +151,15 @@ const config = {
             items: [
               {
                 label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                href: "https://stackoverflow.com/questions/tagged/arkitekt",
               },
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discordapp.com/invite/arkitekt",
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                href: "https://twitter.com/arkitekt",
               },
             ],
           },
@@ -170,7 +172,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/jhnnsrs/doks",
               },
             ],
           },

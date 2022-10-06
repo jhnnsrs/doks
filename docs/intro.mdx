@@ -8,7 +8,38 @@ import { Hello } from "../src/components/Hello";
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
-<Hello />
+```kraphql live
+query {
+      GROUP: experiment(id: 6) {
+        OBJECT: id
+        TYPE: __typename
+        NAME: name
+
+        GROUPS: samples(tags: "bad", limit: 1) {
+          OBJECT: id
+          TYPE: __typename
+          NAME: name
+          DATA: representations(variety: VOXEL) {
+            DATUM_AS_TIME: omero {
+              VALUE_FROM_DATE: acquisitionDate
+            }
+
+            FLATDATUM_OBJECT_AS_INDEX: id
+            FLATDATUM_VALUE_FROM_INT_AS_INDEX: id
+            FLATDATUM_TYPE_AS_INDEX: __typename
+
+            DATUM_AS_EXPOSURE_TIME: omero {
+              OBJECT: id
+              TYPE: __typename
+              VALUE_FROM_SUM: planes {
+                VALUE_FROM_FLOAT: exposureTime
+              }
+            }
+          }
+        }
+      }
+    }
+```
 
 ## Getting Started
 

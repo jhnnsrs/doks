@@ -16,6 +16,8 @@ export const Badge = (props) => <><span class={'badge badge--' + props.class}>{p
 
 
 Get a label for a specific instance on a specific representation
+    
+    
 
 ```graphql
 labelFor(
@@ -38,7 +40,17 @@ labelFor(
 ### Type
 
 #### [`Label`](/docs/schemas/mikro/objects/label) <Badge class="secondary" text="object"/>
-> 
+> A Label is a trough model for image and features.
+    
+    Its map an instance value of a representation
+    (e.g. a pixel value of a segmentation mask) to a set of corresponding features of the segmented
+    class instance.
+
+    There can only be one label per representation and class instance. You can then attach
+    features to the label.
+    
+    
+    
 > 
 
 

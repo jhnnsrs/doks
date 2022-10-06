@@ -15,7 +15,18 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-DateTime Scalar Description
+XArray scalar
+
+This scalar is used to represent xarray objects and allows them to
+be serialized correct.
+XArray objects are used to represent multidimensional data, such as
+time series, images, and other data.
+
+They are used in this project to represent the data of a Representation.
+The Python interface can used to extra and manipulate the data.
+
+This scalar is used to represent the data stored as an object on a S3 bucket
+this object representats a zarr store of an xarray
 
 ```graphql
 scalar XArray

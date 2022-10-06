@@ -15,7 +15,12 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+Group
+
+This object represents a group in the system. Groups are used to
+control access to different parts of the system. Groups are assigned
+to users. A user has access to a part of the system if the user is
+a member of a group that has the permission assigned to it.
 
 ```graphql
 type Group {

@@ -15,7 +15,14 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+" A plane in an image 
+
+Plane follows the convention of the OME model, where the first index is the
+Z axis, the second is the Y axis, the third is the X axis, the fourth is the
+C axis, and the fifth is the T axis.
+
+It attached the image at the indicated index to the image and gives information
+about the plane (e.g. exposure time, delta t to the origin, etc.)
 
 ```graphql
 input PlaneInput {
@@ -36,43 +43,43 @@ input PlaneInput {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>z</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
-> 
+> Z index of the plane
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>y</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
-> 
+> Y index of the plane
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>x</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
-> 
+> X index of the plane
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>c</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
-> 
+> C index of the plane
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>t</b></code>](#)<Bullet />[`Int`](/docs/schemas/mikro/scalars/int) <Badge class="secondary" text="scalar"/>
-> 
+> Z index of the plane
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>positionX</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The planes X position on the stage of the microscope
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>positionY</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The planes Y position on the stage of the microscope
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>positionZ</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The planes Z position on the stage of the microscope
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>exposureTime</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The exposure time of the plane (e.g. Laser exposure)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>PlaneInput.<b>deltaT</b></code>](#)<Bullet />[`Float`](/docs/schemas/mikro/scalars/float) <Badge class="secondary" text="scalar"/>
-> 
+> The Delta T to the origin of the image acqusition
 > 
 
 

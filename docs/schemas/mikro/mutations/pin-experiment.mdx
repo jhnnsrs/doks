@@ -15,7 +15,9 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Sets the pin
+Pin Experiment
+    
+    This mutation pins an Experiment and returns the pinned Experiment.
 
 ```graphql
 pinExperiment(
@@ -32,13 +34,25 @@ pinExperiment(
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>pinExperiment.<b>pin</b></code>](#)<Bullet />[`Boolean!`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The pin
+> The pin state
 > 
 
 ### Type
 
 #### [`Experiment`](/docs/schemas/mikro/objects/experiment) <Badge class="secondary" text="object"/>
-> A Representation is a multi-dimensional Array that can do what ever it wants @elements/experiment
+> 
+    An experiment is a collection of samples and their representations.
+    It mimics the concept of an experiment in the lab and is the top level
+    object in the data model.
+
+    You can use the experiment to group samples and representations likewise
+    to how you would group files into folders in a file system.
+
+    
+    
+    
+    
+    
 > 
 
 

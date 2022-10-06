@@ -23,7 +23,6 @@ type Sample {
   meta: GenericScalar
   name: String!
   experiments: [Experiment!]!
-  nodeid: String
   createdAt: DateTime!
   creator: User
   pinnedBy: [User!]!
@@ -66,27 +65,23 @@ type Sample {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>name</b></code>](#)<Bullet />[`String!`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The name of the sample
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>experiments</b></code>](#)<Bullet />[`[Experiment!]!`](/docs/schemas/mikro/objects/experiment) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
-> 
-
-#### [<code style={{ fontWeight: 'normal' }}>Sample.<b>nodeid</b></code>](#)<Bullet />[`String`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The experiments this sample belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/docs/schemas/mikro/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The time the sample was created
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>creator</b></code>](#)<Bullet />[`User`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="object"/>
-> 
+> The user that created the sample
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>pinnedBy</b></code>](#)<Bullet />[`[User!]!`](/docs/schemas/mikro/objects/user) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The users that have pinned the sample
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>tags</b></code>](#)<Bullet />[`[String]`](/docs/schemas/mikro/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
@@ -168,11 +163,11 @@ type Sample {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>metrics</b></code>](#)<Bullet />[`[Metric!]!`](/docs/schemas/mikro/objects/metric) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> The Representatoin this Metric belongs to
+> The Sample this Metric belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>tables</b></code>](#)<Bullet />[`[Table!]!`](/docs/schemas/mikro/objects/table) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> Sample this table belongs to
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Sample.<b>pinned</b></code>](#)<Bullet />[`Boolean`](/docs/schemas/mikro/scalars/boolean) <Badge class="secondary" text="scalar"/>
