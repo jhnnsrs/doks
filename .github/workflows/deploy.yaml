@@ -16,7 +16,6 @@ jobs:
           cache: yarn
           cache-dependency-path: yarn.lock
       - name: Build website
-        working-directory: website
         run: |
           yarn install --frozen-lockfile
           yarn build
