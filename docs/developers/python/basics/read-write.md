@@ -22,7 +22,7 @@ In this tutorial we will cover the following topics:
 ## Understanding Mikro
 
 Mikro is Arkitekts storage system, and one of the core components of Arkitekt. You can use it to store, explore and organize your bioimage data. Backed by
-a relational database and a s3 compatible object store, Mikro is designed for you to manage datasets of any size. If you are familiar with omero you can think of Mikro as the Arkitekt version of omero. Instead of providing a web interface, Mikro provides only a comprehensive GraphQL API that you can use to interact with your data. For more information on Mikro, see the [Mikro documentation](/docs/services/mikro/intro.md). When interacting with Mikro through python, we can use the mikro client, that is a module of the arkitekt client, and provides some additional convenience methods to make the python ecosystem of
+a relational database and a s3 compatible object store, Mikro is designed for you to manage datasets of any size. If you are familiar with omero you can think of Mikro as the Arkitekt version of omero. Instead of providing a web interface, Mikro provides only a comprehensive GraphQL API that you can use to interact with your data. For more information on Mikro, see the [Mikro documentation](/docs/services/mikro.md). When interacting with Mikro through python, we can use the mikro client, that is a module of the arkitekt client, and provides some additional convenience methods to make the python ecosystem of
 pandas, numpy and xarray work well with Mikro.
 
 
