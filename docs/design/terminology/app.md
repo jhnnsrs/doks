@@ -12,7 +12,7 @@ Arkitekts is built around connecting Apps. Without these Apps arkitekt would be 
 ## Your security is important
 
 One key design principle of Arkitekt is that you are in control of your data. You decide **who** can access your data, and you decide what they can do with it. That same principle applies to Apps. You decide which Apps are allowed to connect to Arkitekt, and you decide **what** they are allowed to do with your data. This means that when an app decides to connect to Arkitekt, you will be asked to approve the connection and the permissions that the app is asking for.
-(this is done through Oauth2 Standard, the same principle that is used when you press "login with google", but you don't need to know that to use Arkitekt.). This double authentication process is key to Arkitekts security and some other design principles, and we will go into more detail about it in the [Security](/docs/security/why.md) section.
+(this is done through Oauth2 Standard, the same principle that is used when you press "login with google", but you don't need to know that to use Arkitekt.). This double authentication process is key to Arkitekts security and some other design principles, and we will go into more detail about it in the [Security](/docs/design/security/why.md) section.
 
 ## Apps can provide functionality
 
@@ -29,7 +29,7 @@ An App on your computer is the obvious example, and yes, if that app is able to 
 
 ![img](../../../static/img/oauth_example.png)
 
-Importantly though the Orkestrator apps asks you for a lot more permissions than the MikroJ app, because the Orkestrator app is able to do a lot more things with your data. If you want to know more about the permissions that an App can ask for, you can read more about it in the [Security](/docs/security/why.md) section. Always remember that you are in control of your data, and you decide what Apps are allowed to do with it, so check the permissions before you approve an App.
+Importantly though the Orkestrator apps asks you for a lot more permissions than the MikroJ app, because the Orkestrator app is able to do a lot more things with your data. If you want to know more about the permissions that an App can ask for, you can read more about it in the [Security](/docs/design/security/why.md) section. Always remember that you are in control of your data, and you decide what Apps are allowed to do with it, so check the permissions before you approve an App.
 
 ### A website
 
@@ -43,11 +43,11 @@ If you want to know more about how to connect to Arkitekt, you can read more abo
 
 ### A robot or Iot device
 
-Now this is where it gets interesting. Your robot or Iot device can also become an arkitekt app. Most of the time, these machines do not need access to your data, but can provide functionality like taking pictures, or measuring temperature. In this case you can use the [Orkestrator](/docs/orkestrator/intro.md) to connect to your robot or Iot device, and call the functionality that it provides. This is a very powerful feature, and we will go into more detail about it in the [Nodes and Templates](node.md) section.
+Now this is where it gets interesting. Your robot or Iot device can also become an arkitekt app. Most of the time, these machines do not need access to your data, but can provide functionality like taking pictures, or measuring temperature. In this case you can use the [Orkestrator](/docs/intro.mdx) to connect to your robot or Iot device, and call the functionality that it provides. This is a very powerful feature, and we will go into more detail about it in the [Nodes and Templates](node.md) section.
 
 ### How does the App know where to connect to?
 
-As Arkitekt is nothing more than a server in your lab (or in the cloud), and these apps are just programs that run on your computer, they need to know where to connect to. So you might wonder how does the app know which server to use? The answer turns out to be quite difficult and you can read more about it in the advanced [Discovery](discovery.md) section. But the short answer is that the app needs to know the ip-adress of the Arkitekt server, which depending on your apps location can be autoconfigured through the network, or you can manually enter the ip-adress of the server.For example you are using the Orkestrator Desktop App, it will automatically discover the server, and if you are using the Orkestrator website, it will ask you to enter the ip-adress of the server.
+As Arkitekt is nothing more than a server in your lab (or in the cloud), and these apps are just programs that run on your computer, they need to know where to connect to. So you might wonder how does the app know which server to use? The answer turns out to be quite difficult and you can read more about it in the advanced Discovery section. But the short answer is that the app needs to know the ip-adress of the Arkitekt server, which depending on your apps location can be autoconfigured through the network, or you can manually enter the ip-adress of the server.For example you are using the Orkestrator Desktop App, it will automatically discover the server, and if you are using the Orkestrator website, it will ask you to enter the ip-adress of the server.
 
 ### Versioning
 
