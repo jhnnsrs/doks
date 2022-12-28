@@ -21,7 +21,7 @@ export const NoFakts: React.FC<PublicHomeProps> = (props) => {
           {() => (
             <Formik<ConfigValues>
               initialValues={{
-                host: `${window.location.hostname}:8000`,
+                host: `https://lok-sibarita.iins.u-bordeaux.fr/f/`,
               }}
               onSubmit={({ host }, { setSubmitting }) => {
                 setSubmitting(true);
@@ -29,7 +29,7 @@ export const NoFakts: React.FC<PublicHomeProps> = (props) => {
                   load({
                     endpoint: {
                       name: "Localhost",
-                      base_url: `http://${host}/f/`,
+                      base_url: host,
                     },
                     clientId: "Zvc8fwLMMINjcAxoaTBG2L6ATlV746D3Zc4T4Wiu",
                     clientSecret:
