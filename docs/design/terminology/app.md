@@ -1,0 +1,69 @@
+---
+id: app
+title: What is an App?
+sidebar_label: App
+sidebar_position: 1
+---
+
+# What is an App?
+
+Arkitekts is built around connecting Apps. Without these Apps arkitekt would be just a (reasonably cool) storage platform with a developer interface. Apps ( in the Arkitekt sense) are programs/robots/scripts that are able to connect to arkitekt and provide the functionality that makes Arkitekt useful (like applying filters to images) and give you the ability to interact with the data that you store in Arkitekt. As such, the definition of an arkitekt App is a bit broaders, than what you might think of as an App (especially if you are used to the App Store on your phone). 
+
+## Your security is important
+
+One key design principle of Arkitekt is that you are in control of your data. You decide **who** can access your data, and you decide what they can do with it. That same principle applies to Apps. You decide which Apps are allowed to connect to Arkitekt, and you decide **what** they are allowed to do with your data. This means that when an app decides to connect to Arkitekt, you will be asked to approve the connection and the permissions that the app is asking for.
+(this is done through Oauth2 Standard, the same principle that is used when you press "login with google", but you don't need to know that to use Arkitekt.). This double authentication process is key to Arkitekts security and some other design principles, and we will go into more detail about it in the [Security](/docs/security/why.md) section.
+
+## Apps can provide functionality
+
+Depending on the App, you can use it to do a lot of different things. For example, you can use an App to just download images from Arkitekt, or you can use some interesting python code to display a graph of your data. One important aspect is that an app can also choose to expose some of its functionality as [Templates](template.md). This means that you can use the functionality of the App in other Apps, or in the Orkestrator. This is a very powerful feature, and we will go into more detail about it in the [Nodes and Templates](node.md) section.
+
+
+## Examples of Apps
+
+As we are a firm believer in the power of the example, here are a few examples of Apps in the Arkitekt sense, and a few negative examples of Apps in the Arkitekt sense.
+
+### An "App" on your computer
+
+An App on your computer is the obvious example, and yes, if that app is able to connect to Arkitekt (because the developer decided to make it an Arkitekt App), then it is an Arkitekt App. Easy. Two examples of this are the Orkestrator Desktop App, and MikroJ an app that is used to enable ImageJ on the platform. Both apps will as you to approve the connection to Arkitekt, and both apps will ask you for permissions.
+
+![img](../../../static/img/oauth_example.png)
+
+Importantly though the Orkestrator apps asks you for a lot more permissions than the MikroJ app, because the Orkestrator app is able to do a lot more things with your data. If you want to know more about the permissions that an App can ask for, you can read more about it in the [Security](/docs/security/why.md) section. Always remember that you are in control of your data, and you decide what Apps are allowed to do with it, so check the permissions before you approve an App.
+
+### A website
+
+Also a website can be an an arkitekt app. Indeed this website is an arkitekt app (If you haven't done so already, you can try it out by clicking the "login with arkitekt" button in the top right corner). In most cases the website will ask you to point it to your arkitekt instance (which could be running on a public server, or in your local network), and then it will ask you to approve the connection. If you do, you will be able to use the website to interact with your data in Arkitekt.
+
+### Your code
+
+Your code can also become an Arkitekt app. In fact, if you want your code to connect to an arkitekt server, it needs to become an app, because it needs rights to access your data. If you are using python you can use the arkitekt python library to connect to Arkitekt. If you are using javascript you can use the arkitekt javascript/typescript library. If you are using another language, you can use the Arkitekt API directly.
+
+If you want to know more about how to connect to Arkitekt, you can read more about it in the [Developer](/docs/developers/intro.mdx) section. We made sure to be compatible with standard webstandards (Oauth2, websockets), so you can use almost any language that is able to connect to a webserver.
+
+### A robot or Iot device
+
+Now this is where it gets interesting. Your robot or Iot device can also become an arkitekt app. Most of the time, these machines do not need access to your data, but can provide functionality like taking pictures, or measuring temperature. In this case you can use the [Orkestrator](/docs/orkestrator/intro.md) to connect to your robot or Iot device, and call the functionality that it provides. This is a very powerful feature, and we will go into more detail about it in the [Nodes and Templates](node.md) section.
+
+### How does the App know where to connect to?
+
+As Arkitekt is nothing more than a server in your lab (or in the cloud), and these apps are just programs that run on your computer, they need to know where to connect to. So you might wonder how does the app know which server to use? The answer turns out to be quite difficult and you can read more about it in the advanced [Discovery](discovery.md) section. But the short answer is that the app needs to know the ip-adress of the Arkitekt server, which depending on your apps location can be autoconfigured through the network, or you can manually enter the ip-adress of the server.For example you are using the Orkestrator Desktop App, it will automatically discover the server, and if you are using the Orkestrator website, it will ask you to enter the ip-adress of the server.
+
+### Versioning
+
+Arkitekt was designed from the ground up to be able to handle different versions of the same App. This means that you can have multiple versions of the same App running at the same time, each with their own set of Nodes (functionality) and their own set of permissions. This is useful if you want to test a new version of an App, or if some functionality is not working as expected, you can always roll back to the previous version. Internally different versions of an App will become different AppClients (analogous to an Oauth2 Client).
+
+
+
+
+
+
+
+
+
+ You might think of an App like an application on your phone, and you would be right. But an App in Arkitekt is a bit more than that. Apps are 
+
+
+
+
+An App is a collection of Nodes that are connected to each other. Each Node is a piece of code that does something, and each Node is connected to other Nodes. The connections between the Nodes are called Edges, and they are used to pass data between the Nodes.
