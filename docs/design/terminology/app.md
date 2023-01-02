@@ -51,7 +51,7 @@ As Arkitekt is nothing more than a server in your lab (or in the cloud), and the
 
 ### Versioning
 
-Arkitekt was designed from the ground up to be able to handle different versions of the same App. This means that you can have multiple versions of the same App running at the same time, each with their own set of Nodes (functionality) and their own set of permissions. This is useful if you want to test a new version of an App, or if some functionality is not working as expected, you can always roll back to the previous version. Internally different versions of an App will become different AppClients (analogous to an Oauth2 Client).
+Arkitekt was designed from the ground up to be able to handle different versions of the same App. This means that you can have multiple versions of the same App running at the same time, each with their own set of Templates (implementing the same or other nodes) and their own set of permissions. This is useful if you want to test a new version of an App, or if some functionality is not working as expected, you can always roll back to the previous version. Internally different versions of an App will become different AppClients (analogous to an Oauth2 Client).
 
 
 

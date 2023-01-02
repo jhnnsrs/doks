@@ -50,8 +50,12 @@ const KraphQLRender = (props) => {
 };
 
 function KraphQLResultWithHeader(props) {
-  const [chartRegistry, setChartRegistry] = useState();
-  const [smartRegistry, setSmartRegistry] = useState();
+  const [chartRegistry, setChartRegistry] = useState<
+    ChartRegistry | undefined
+  >();
+  const [smartRegistry, setSmartRegistry] = useState<
+    SmartRegistry | undefined
+  >();
 
   useEffect(() => {
     let x = new ChartRegistry();
