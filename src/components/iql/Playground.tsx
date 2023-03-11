@@ -16,6 +16,7 @@ import React, { useEffect, useState } from "react";
 
 const KraphQLRender = (props) => {
   const { setActiveQueryData } = useKraphQL();
+
   const { client } = useMikro();
 
   useEffect(() => {
@@ -30,7 +31,7 @@ const KraphQLRender = (props) => {
             setActiveQueryData(res.data);
           });
       } catch (e) {
-        console.error(e);
+        console.log("e", e);
       }
     }
   }, [props.code]);

@@ -21,6 +21,7 @@ import type { ThemeConfig } from "@docusaurus/theme-live-codeblock";
 
 import styles from "./styles.module.css";
 import { AllGuarded } from "@site/src/fallbacks/guarded";
+import { KraphQLPlayground } from "@site/src/components/iql/Playground";
 
 function Header({ children }: { children: React.ReactNode }) {
   return <div className={clsx(styles.playgroundHeader)}>{children}</div>;
@@ -118,6 +119,20 @@ export default function Playground({
     liveCodeBlock: { playgroundPosition },
   } = themeConfig as ThemeConfig;
   const prismTheme = usePrismTheme();
+
+  console.log(props);
+  if (props.className === "language-kraphql") {
+    return (
+      <BrowserOnly>
+        {() => (
+          <KraphQLPlayground
+            code={children}
+            playgroundPosition={playgroundPosition}
+          />
+        )}
+      </BrowserOnly>
+    );
+  }
 
   const noInline = props.metastring?.includes("noInline") ?? false;
 

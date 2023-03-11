@@ -14,33 +14,31 @@ Let's discover **Live Graphs in less than 5 minutes**.
 
 ```kraphql live
 query {
-      GROUP: experiment(id: 6) {
+  GROUP: dataset(id: 8) {
+    OBJECT: id
+    TYPE: __typename
+    NAME: name
+
+    DATA: representations(variety: VOXEL, limit: 10) {
+      FLATDATUM_OBJECT_AS_INDEX: id
+      FLATDATUM_VALUE_FROM_INT_AS_INDEX: id
+      FLATDATUM_TYPE_AS_INDEX: __typename
+
+
+
+      DATUM_AS_INCREASING: metric(key: "Increasing") {
         OBJECT: id
-        TYPE: __typename
-        NAME: name
+        VALUE_FROM_FLOAT: value
 
-        GROUPS: samples(tags: "bad", limit: 1) {
-          OBJECT: id
-          TYPE: __typename
-          NAME: name
-          DATA: representations(variety: VOXEL) {
-            DATUM_AS_TIME: omero {
-              VALUE_FROM_DATE: acquisitionDate
-            }
+      }
 
-            FLATDATUM_OBJECT_AS_INDEX: id
-            FLATDATUM_VALUE_FROM_INT_AS_INDEX: id
-            FLATDATUM_TYPE_AS_INDEX: __typename
 
-            DATUM_AS_EXPOSURE_TIME: omero {
-              OBJECT: id
-              TYPE: __typename
-              VALUE_FROM_SUM: planes {
-                VALUE_FROM_FLOAT: exposureTime
-              }
-            }
-          }
-        }
+      DATUM_AS_DECREASING: metric(key: "Decreasing") {
+        OBJECT: id
+        VALUE_FROM_FLOAT: value
+
       }
     }
+  }
+}
 ```
