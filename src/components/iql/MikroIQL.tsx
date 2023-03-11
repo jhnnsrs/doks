@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createGraphiQLFetcher, Fetcher } from "@graphiql/toolkit";
 import { useMikro } from "mikrots";
-import { useHerre } from "herre";
+import { useHerre } from "@jhnnsrs/herre";
 import { GraphiQLProvider } from "graphiql";
 import { IQL } from "./IQL";
 import { DocumentNode } from "@apollo/client";
@@ -27,7 +27,7 @@ export const MikroIQL: React.FC<MikroIQLProps> = ({ query, onEditQuery }) => {
 
   return (
     <>
-      <div className="p-2 w-full text-xl font-light bg-gray-200 text-slate-900 rounded-t-md">
+      <div className="p-2 w-full text-xl font-light bg-gray-200 text-slate-900 rounded-t-md border-none border-0 ">
         <Translate
           id="theme.Playground.result"
           description="The result label of the live codeblocks"
