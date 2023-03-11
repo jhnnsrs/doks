@@ -1,18 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import clsx from "clsx";
-import useIsBrowser from "@docusaurus/useIsBrowser";
-import {
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview,
-  LiveContext,
-} from "react-live";
-import Translate from "@docusaurus/Translate";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import { usePrismTheme } from "@docusaurus/theme-common";
-import { AllGuarded } from "@site/src/fallbacks/guarded";
+import Translate from "@docusaurus/Translate";
 import {
   ChartRegistry,
   KraphQLProvider,
@@ -20,10 +7,12 @@ import {
   SmartRegistry,
   useKraphQL,
 } from "@jhnnsrs/kraphql";
-import { useMikro, useMikroQuery } from "mikrots";
-import gql from "graphql-tag";
 import { EntryTree } from "@site/src/components/Hello";
 import { MikroIQL } from "@site/src/components/iql/MikroIQL";
+import { AllGuarded } from "@site/src/fallbacks/guarded";
+import gql from "graphql-tag";
+import { useMikro } from "mikrots";
+import React, { useEffect, useState } from "react";
 
 const KraphQLRender = (props) => {
   const { setActiveQueryData } = useKraphQL();
@@ -134,7 +123,7 @@ export const KraphQLPlayground: React.FC<{
   const [activeCode, setActiveCode] = useState(code);
 
   return (
-    <div className="border-slate-300 border border-1 p-1 ">
+    <div className="border-slate-300  p-1 ">
       {playgroundPosition === "top" ? (
         <>
           <MikroIQL query={activeCode} onEditQuery={setActiveCode} />

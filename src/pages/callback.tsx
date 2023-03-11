@@ -3,7 +3,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import { useLocation, useHistory } from "@docusaurus/router";
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import { useHerre } from "herre";
+import { useHerre } from "@jhnnsrs/herre";
 
 export const CallbackInner: React.FC<{}> = (props) => {
   const { setCode, token } = useHerre();
@@ -16,6 +16,7 @@ export const CallbackInner: React.FC<{}> = (props) => {
     console.log(code);
     if (code) {
       setCode(code);
+      window.close();
     }
   }, []);
 

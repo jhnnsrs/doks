@@ -1,9 +1,9 @@
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import CancelablePromise from "cancelable-promise";
-import { Fakts, useFakts } from "fakts";
+import { Fakts, useFakts } from "@jhnnsrs/fakts";
 import { Field, Form, Formik } from "formik";
-import { useHerre } from "herre";
+import { useHerre } from "@jhnnsrs/herre";
 import React, { useState } from "react";
 
 export interface PublicHomeProps {}
@@ -24,31 +24,45 @@ export const NoHerre: React.FC<PublicHomeProps> = (props) => {
         <BrowserOnly>
           {() => (
             <>
-              <button
-                onClick={() =>
-                  login(
-                    {
-                      clientId: fakts.herre.client_id,
-                      clientSecret: fakts.herre.client_secret,
-                      scopes: fakts.herre.scopes,
-                      redirectUri:
+              {fakts && fakts.lok ? (
+                <>
+                  <button
+                    onClick={() => {
+                      let redirectUri =
                         window.location.origin +
                         d.siteConfig.baseUrl +
-                        "callback",
-                    },
-                    {
-                      base_url: fakts.herre.base_url,
-                      tokenUrl: fakts.herre.base_url + "/token/",
-                      userInfoEndpoint: fakts.herre.base_url + "/userinfo/",
-                      authUrl: fakts.herre.base_url + "/authorize/",
-                    }
-                  )
-                }
-                className="w-full shadow-lg shadow-primary-300/60 flex items-center justify-center px-8 py-3 border text-base font-medium rounded-md dark:text-white text-back-700 border-primary-400 bg-primary-300 hover:bg-primary-400 md:py-4 md:text-lg md:px-10"
-              >
-                Login with {fakts.herre.base_url}
-              </button>
-              <button onClick={() => setFakts(null)}>Disconnect</button>
+                        "callback";
+                      console.log(redirectUri);
+
+                      login(
+                        {
+                          clientId: fakts.lok.client_id,
+                          clientSecret: fakts.lok.client_secret,
+                          scopes: fakts.lok.scopes,
+                          redirectUri,
+                        },
+                        {
+                          base_url: fakts.lok.base_url,
+                          tokenUrl: fakts.lok.base_url + "/token/",
+                          userInfoEndpoint: fakts.lok.base_url + "/userinfo/",
+                          authUrl: fakts.lok.base_url + "/authorize/",
+                        }
+                      );
+                    }}
+                    className="w-full shadow-lg shadow-primary-300/60 flex items-center justify-center px-8 py-3 border text-base font-medium rounded-md dark:text-white text-back-700 border-primary-400 bg-primary-300 hover:bg-primary-400 md:py-4 md:text-lg md:px-10"
+                  >
+                    Login with {fakts?.lok?.base_url}
+                  </button>
+                  <button onClick={() => setFakts(null)}>Disconnect</button>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  Looks like your faktds are not configured properly for this
+                  service. Choose a different server{" "}
+                  <button onClick={() => setFakts(null)}>Logout</button>
+                </>
+              )}
             </>
           )}
         </BrowserOnly>

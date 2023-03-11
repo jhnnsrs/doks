@@ -1,16 +1,20 @@
-import { FaktsGuard } from "fakts";
-import { HerreGuard } from "herre";
+import { FaktsGuard } from "@jhnnsrs/fakts";
+import { HerreGuard } from "@jhnnsrs/herre";
 import { MikroGuard } from "mikrots";
 import { NoFakts } from "./NoFakts";
 import { NoHerre } from "./NoHerre";
 import { NoMikro } from "./NoMikro";
 import React, { ReactNode } from "react";
 
+export const Fallback = () => {
+  return <>Please connect to your Server first to use this Feature</>;
+};
+
 export const AllGuarded = ({ children }: { children: React.ReactNode }) => {
   return (
-    <FaktsGuard fallback={<NoFakts />}>
-      <HerreGuard fallback={<NoHerre />}>
-        <MikroGuard fallback={<NoMikro />}>{children}</MikroGuard>
+    <FaktsGuard fallback={<Fallback />}>
+      <HerreGuard fallback={<Fallback />}>
+        <MikroGuard fallback={<Fallback />}>{children}</MikroGuard>
       </HerreGuard>
     </FaktsGuard>
   );

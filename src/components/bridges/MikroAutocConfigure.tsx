@@ -1,5 +1,5 @@
-import { useFakts } from "fakts";
-import { useHerre } from "herre";
+import { useFakts } from "@jhnnsrs/fakts";
+import { useHerre } from "@jhnnsrs/herre";
 import { useMikro } from "mikrots";
 import React, { useEffect } from "react";
 

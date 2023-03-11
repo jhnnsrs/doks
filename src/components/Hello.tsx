@@ -1,6 +1,5 @@
-import { FaktsGuard, useFakts } from "fakts";
-import { faktsGuarded } from "fakts/dist/FaktsGuard";
-import { HerreGuard, useHerre } from "herre";
+import { FaktsGuard, useFakts } from "@jhnnsrs/fakts";
+import { HerreGuard, useHerre } from "@jhnnsrs/herre";
 import React, { useEffect, useState } from "react";
 import { NoFakts } from "../fallbacks/NoFakts";
 import { NoHerre } from "../fallbacks/NoHerre";

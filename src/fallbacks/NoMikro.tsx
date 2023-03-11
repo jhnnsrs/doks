@@ -1,9 +1,9 @@
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import CancelablePromise from "cancelable-promise";
-import { Fakts, useFakts } from "fakts";
+import { Fakts, useFakts } from "@jhnnsrs/fakts";
 import { Field, Form, Formik } from "formik";
-import { useHerre } from "herre";
+import { useHerre } from "@jhnnsrs/herre";
 import React, { useState } from "react";
 
 export interface PublicHomeProps {}
