@@ -31,7 +31,7 @@ const flussConf = {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Doks",
+  title: "Arkitekt",
   tagline: "streaming analysis for microscopy",
   url: "https://jhnnsrs.github.io/",
   baseUrl: "/doks/",
@@ -39,6 +39,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.svg",
+
   themes: ['@docusaurus/theme-live-codeblock'],
 
   // GitHub pages deployment config.
@@ -89,14 +90,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/jhnnsrs/doks/edit/master/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/jhnnsrs/doks/edit/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -114,7 +115,7 @@ const config = {
         // respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Doks",
+        title: "arkitekt",
         logo: {
           alt: "Doks Logo",
           src: "img/favicon.svg",
@@ -134,6 +135,7 @@ const config = {
           },
         ],
       },
+      image: "img/favicon.svg",
       footer: {
         style: "dark",
         links: [

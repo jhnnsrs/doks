@@ -3,8 +3,8 @@ import { Fetcher } from "@graphiql/toolkit";
 import { FieldHookConfig, useField } from "formik";
 import { GraphiQLProvider } from "graphiql";
 import React from "react";
-import { useHerre } from "herre";
-import { useMikro } from "mikrots";
+import { useHerre } from "@jhnnsrs/herre";
+import { useMikro } from "@jhnnsrs/mikro";
 import { IQL } from "./IQL";
 
 export interface MikroIQLFieldProps {

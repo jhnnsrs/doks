@@ -1,6 +1,6 @@
 import { FaktsGuard } from "@jhnnsrs/fakts";
 import { HerreGuard } from "@jhnnsrs/herre";
-import { MikroGuard } from "mikrots";
+import { MikroGuard } from "@jhnnsrs/mikro";
 import { NoFakts } from "./NoFakts";
 import { NoHerre } from "./NoHerre";
 import { NoMikro } from "./NoMikro";

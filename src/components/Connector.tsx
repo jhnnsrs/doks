@@ -1,19 +1,15 @@
-import BrowserOnly from "@docusaurus/BrowserOnly";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { Popover, Transition } from "@headlessui/react";
 import {
-  Fakts,
-  FaktsGuard,
-  useFakts,
-  introspectBeacon,
   buildFaktsRetrieveGrant,
+  Fakts,
+  introspectBeacon,
+  useFakts,
 } from "@jhnnsrs/fakts";
 import { HerreGuard, useHerre } from "@jhnnsrs/herre";
-import { MikroGuard } from "mikrots";
 import { CancelablePromise } from "cancelable-promise";
-import { Menu, Popover, Transition } from "@headlessui/react";
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import { VscDebugDisconnect, VscClose, VscAccount } from "react-icons/vsc";
-import { NoFakts } from "../fallbacks/NoFakts";
+import React, { Fragment, useRef, useState } from "react";
+import { VscClose, VscDebugDisconnect } from "react-icons/vsc";
 
 export const NoFaktsFallback = () => {
   const { fakts, load, setFakts } = useFakts();

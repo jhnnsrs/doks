@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import X from "@site/static/img/favicon.svg";
 
 import styles from "./index.module.css";
 
@@ -12,7 +13,7 @@ function HomepageHeader() {
   return (
     <header className="bg-slate-900">
       <div className="container mx-auto text-center py-24">
-        <img src="/img/favicon.svg" alt="Fakts Logo" className="w-64" />
+        <X className="w-64" />
         <h1 className="text-4xl font-bold text-white">{siteConfig.title}</h1>
         <p className="text-xl py-6 text-white">{siteConfig.tagline}</p>
 

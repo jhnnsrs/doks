@@ -13,9 +13,11 @@ function Display(props) {
   const { data } = useMikroQuery(
     gql`
       query {
-        representations(limit: 10) {
+        representations(limit: 3) {
           id
           name
+          store
+          shape
         }
       }
     `

@@ -11,7 +11,7 @@ import { EntryTree } from "@site/src/components/Hello";
 import { MikroIQL } from "@site/src/components/iql/MikroIQL";
 import { AllGuarded } from "@site/src/fallbacks/guarded";
 import gql from "graphql-tag";
-import { useMikro } from "mikrots";
+import { useMikro } from "@jhnnsrs/mikro";
 import React, { useEffect, useState } from "react";
 
 const KraphQLRender = (props) => {
