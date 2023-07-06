@@ -8,11 +8,6 @@ object-assign
  * @license MIT */
 
 /**
- * @license MIT <https://opensource.org/licenses/MIT>
- * @copyright Michael Hart 2022
- */
-
-/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
@@ -30,17 +25,6 @@ object-assign
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */
-
-/**
- * @remix-run/router v1.4.0
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
  */
 
 /**
