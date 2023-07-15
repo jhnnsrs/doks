@@ -2,7 +2,7 @@
 id: why
 title: Why you should care about security?
 sidebar_label: Why?
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Why should I care about security?

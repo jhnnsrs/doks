@@ -1,40 +1,21 @@
 ---
 id: intro
-title: Intro
+title: Design
 sidebar_label: Intro
 slug: /intro
 sidebar_position: 1
 ---
 
-import { DownloadButton } from "../src/components/layout/Button";
-import { DisplayRun } from "../src/components/reaktion/DisplayRun";
+Welcome to the Arkitekt platform documentation! Arkitekt is a platform and establishing framework for modern bioimage analysis
+in all of its glory. It provides ready to use solutions to create and deploy user-friendly bioimage analysis workflows utilizing your bioimage
+app ecosystem, exisiting code and infrastructure. Arkitekt follows the mantra of "bring your own tools" and will only interface as
+a middleman with you and your tools, managing only the data as well as the flow and orchestration of your analysis. Here are some of
+its features:
 
-### Good to know
+![img](/img/core.png)
 
-Arkitekt was envisioned as a complete platform to streamline analysis processes in your lab environment. As such it has to encompass
-a lot of different features that might be overkill for your specific needs. However as your needs might grow we would like you to
-easily integrate more of the advanced features in your environment. We therefore provide you with different configurations to choose
-from how to deploy the platform in your lab.
-
-<DisplayRun url="/doks/runs/2832.json" />
-
-### The Easy Way
-
-![img](/img/konstruktor.png)
-
-Download the Configuration Software:
-
-<DownloadButton>Download Jio</DownloadButton>
-
-It will guide you through the installation process and the deployment of the software package on your specific hardware. It will
-also give you a rough estimate of the resources you will need for the installation.
-
-### The Hard Way
-
-Arkitekt as a platform consists of many submodules (microservices) that have their own responsiblities and can be deployed from
-a single computer to a complete kubernetes multi-node cluster on the cloud. In this preview we support a docker deployment through
-docker-compose and provide different configurations depending if you have a multi docker machine. We also provide helm-charts for a kubernetes
-deployment.
+This documentation should try to give you an overview of all of the features of the platform and how to use them. If you have any
+suggestions how to improve this documentation, please feel free to open an issue on our [github](https://github.com/jhnnsrs/doks)
 
 ### Build on the Shoulder of Giants
 
@@ -59,7 +40,3 @@ Arkitekt stitches together a plethora of open-source projects and tries to make 
     </div>
   </div>
 </div>
-
-### What is a Platform
-
-We choose the term platform deliberatily to seperate it from the common term software. As Arkitekt
