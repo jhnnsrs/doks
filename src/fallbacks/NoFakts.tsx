@@ -1,5 +1,5 @@
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import { buildFaktsRetrieveGrant, Fakts, useFakts } from "@jhnnsrs/fakts";
+import { Fakts, useFakts } from "@jhnnsrs/fakts";
 import React, { useState } from "react";
 
 export interface PublicHomeProps {}
@@ -15,35 +15,6 @@ export const NoFakts: React.FC<PublicHomeProps> = (props) => {
   const ref = React.useRef<HTMLInputElement>(null);
 
   console.log(fakts);
-
-  const retrieveWellKnown = async (host: string) => {
-    if (!host.endsWith("/")) {
-      host = host + "/";
-    }
-    if (!host.startsWith("http://") && !host.startsWith("https://")) {
-      host = "http://" + host;
-    }
-
-    console.log(host);
-
-    const response = await fetch(`${host}.well-known/fakts`);
-
-    const endpoint = await response.json();
-
-    console.log(endpoint);
-    console.log(window.location.host + "/callback");
-
-    let x = await load(
-      buildFaktsRetrieveGrant(
-        endpoint,
-        "latest",
-        "github.io.jhnnsrs.doks",
-        "http://" + window.location.host + "/callback"
-      )
-    );
-
-    console.log(x);
-  };
 
   return (
     <div className="flex flex-col">
@@ -68,9 +39,15 @@ export const NoFakts: React.FC<PublicHomeProps> = (props) => {
                     </button>
                   ) : (
                     <button
-                      onClick={() => {
-                        retrieveWellKnown(ref.current?.value || "");
-                      }}
+                      onClick={() =>
+                        load({
+                          endpoint: ref.current.value,
+                          manifest: {
+                            version: "latest",
+                            identifier: "github.io.jhnnsrs.doks",
+                          },
+                        })
+                      }
                       type="submit"
                       className=" shadow-lg shadow-primary-700/90 flex items-center  border border-transparent text-base font-medium rounded-md text-white bg-primary-300 hover:bg-primary-500"
                     >

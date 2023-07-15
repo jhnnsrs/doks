@@ -6,21 +6,10 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 import { useHerre } from "@jhnnsrs/herre";
 
 export const CallbackInner: React.FC<{}> = (props) => {
-  const { setCode, token } = useHerre();
   const location = useLocation();
   const history = useHistory();
 
-  useEffect(() => {
-    const urlParams = new URLSearchParams(location.search);
-    let code = urlParams.get("code");
-    console.log(code);
-    if (code) {
-      setCode(code);
-      window.close();
-    }
-  }, []);
-
-  return <>{token ? "Signed in" : "Signing in....."}</>;
+  return <>{"Hallo"}</>;
 };
 
 export default function Callback(): JSX.Element {

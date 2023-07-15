@@ -1,11 +1,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { Popover, Transition } from "@headlessui/react";
-import {
-  buildFaktsRetrieveGrant,
-  Fakts,
-  introspectBeacon,
-  useFakts,
-} from "@jhnnsrs/fakts";
+import { Fakts, useFakts } from "@jhnnsrs/fakts";
 import { HerreGuard, useHerre } from "@jhnnsrs/herre";
 import { CancelablePromise } from "cancelable-promise";
 import React, { Fragment, useRef, useState } from "react";
@@ -19,23 +14,9 @@ export const NoFaktsFallback = () => {
   const [future, setFuture] = useState<Promise<Fakts> | null>(null);
   const [edit, setEdit] = useState<boolean>(false);
   const ref = useRef<HTMLInputElement>(null);
+  const [error, setError] = useState<Error | null>(null);
 
   console.log(fakts);
-
-  const retrieveWellKnown = async (host: string) => {
-    let endpoint = await introspectBeacon({ url: host });
-
-    let x = await load(
-      buildFaktsRetrieveGrant(
-        endpoint,
-        "latest",
-        "github.io.jhnnsrs.doks",
-        "http://" + window.location.host + "/callback"
-      )
-    );
-
-    console.log(x);
-  };
 
   return (
     <Popover as="div" className="my-auto ">
@@ -112,17 +93,27 @@ export const NoFaktsFallback = () => {
                       <button
                         className={`"cursor-pointer shadow-primary-300/40 border-primary-600 shadow-md text-white bg-primary-500 group border-1 border-primary-300 border border-shadow-primary-300 flex w-full items-center rounded-md px-2 py-2 text-sm`}
                         onClick={() => {
-                          retrieveWellKnown(
-                            "https://lok-sibarita.iins.u-bordeaux.fr"
-                          );
+                          load({
+                            endpoint: "https://lok-sibarita.iins.u-bordeaux.fr",
+                            manifest: {
+                              version: "laest",
+                              identifier: "github.io.jhnnsrs.doks",
+                            },
+                          })
+                            .then((f) => {
+                              setError(undefined);
+                            })
+                            .catch((e) => {
+                              setError(e);
+                            });
                         }}
                       >
-                        Connect to our Demo Server
+                        {error ? error.message : "Connectto our Demo Server"}
                       </button>
                     </div>
-                    <div className="mt-2 font-light text-gray-900 text-center text-sm my-auto border-t-1 border-t border-gray-800">
+                    <div className="mt-2 font-light text-gray-900 text-center text-sm my-auto border-t-1 border-t border-gray-800 cursor-pointer">
                       {" "}
-                      Connect to your own Server
+                      {error ? error.message : "Connectto our Demo Server"}
                     </div>
                     <div className="flex flex-row gap-1 m-2">
                       <input
@@ -141,7 +132,19 @@ export const NoFaktsFallback = () => {
                         ) : (
                           <button
                             onClick={() => {
-                              retrieveWellKnown(ref.current?.value || "");
+                              load({
+                                endpoint: ref.current.value,
+                                manifest: {
+                                  version: "latest",
+                                  identifier: "github.io.jhnnsrs.doks",
+                                },
+                              })
+                                .then((f) => {
+                                  setError(undefined);
+                                })
+                                .catch((e) => {
+                                  setError(e);
+                                });
                             }}
                             type="submit"
                             className="h-full flex items-center  border border-transparent text-base font-medium rounded-md text-white bg-primary-300 hover:bg-primary-500"
