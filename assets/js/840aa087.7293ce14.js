@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdoks=self.webpackChunkdoks||[]).push([[2944],{8082:e=>{e.exports=JSON.parse('{"title":"Services","slug":"/category/services","permalink":"/doks/docs/category/services","navigation":{"previous":{"title":"Live Queries","permalink":"/doks/docs/features/live_queries"},"next":{"title":"Mikro","permalink":"/doks/docs/services/mikro"}}}')}}]);

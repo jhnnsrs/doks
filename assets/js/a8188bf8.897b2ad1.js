@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdoks=self.webpackChunkdoks||[]).push([[9275],{3934:e=>{e.exports=JSON.parse('{"title":"Features","slug":"/category/features","permalink":"/doks/docs/category/features","navigation":{"previous":{"title":"Why?","permalink":"/doks/docs/design/terminology/why"},"next":{"title":"Live Graphs","permalink":"/doks/docs/features/live_graphs"}}}')}}]);
