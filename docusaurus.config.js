@@ -77,6 +77,15 @@ const config = {
     [
       "@edno/docusaurus2-graphql-doc-generator",
       { ...graphqlMarkdownConfig, ...flussConf, id: "fluss" },
+    ],[
+        '@docusaurus/plugin-ideal-image',
+        {
+          quality: 90,
+          max: 2000, // max resized image's size.
+          min: 640, // min resized image's size. if original is lower, use that size.
+          steps: 3, // the max number of images generated between min and max (inclusive)
+          disableInDev: false,
+        },
     ],
   ],
 
