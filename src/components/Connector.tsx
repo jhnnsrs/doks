@@ -1,6 +1,12 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { Popover, Transition } from "@headlessui/react";
-import { Fakts, useFakts } from "@jhnnsrs/fakts";
+import {
+  ConnectButtons,
+  LoginButton,
+  LogoutButton,
+  UnconnectButton,
+} from "@jhnnsrs/arkitekt";
+import { Fakts, FaktsGuard, useFakts } from "@jhnnsrs/fakts";
 import { HerreGuard, useHerre } from "@jhnnsrs/herre";
 import { CancelablePromise } from "cancelable-promise";
 import React, { Fragment, useRef, useState } from "react";
@@ -11,8 +17,6 @@ export const NoFaktsFallback = () => {
   const { login } = useHerre();
 
   const d = useDocusaurusContext();
-  const [future, setFuture] = useState<Promise<Fakts> | null>(null);
-  const [edit, setEdit] = useState<boolean>(false);
   const ref = useRef<HTMLInputElement>(null);
   const [error, setError] = useState<Error | null>(null);
 
@@ -209,7 +213,7 @@ export const ShowMe = () => {
     <Popover as="div" className="my-auto ">
       <div>
         <Popover.Button className="inline-flex border-0 cursor-pointer bg-primary-300  w-full justify-center rounded-md text-white px-4 py-2 my-auto shadow-primary-300/20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-          @{user.preferred_username}
+          {user.preferred_username}@{fakts.self.name}
         </Popover.Button>
       </div>
       <Transition
@@ -227,19 +231,10 @@ export const ShowMe = () => {
         >
           <div className="">
             <div className="flex flex-col w-full ">
-              {fakts && fakts.lok && (
+              {user && (
                 <>
-                  <div className="px-2 py-2 w-full ">
-                    <button
-                      onClick={() => {
-                        logout();
-                        setFakts(null);
-                      }}
-                      className={`"w-full cursor-pointer shadow-primary-300/40 border-primary-600 shadow-md text-white bg-primary-500 border-1 border-primary-300 border border-shadow-primary-300  rounded-md  text-sm`}
-                    >
-                      Logout
-                    </button>
-                  </div>
+                  <LogoutButton className="p-3 font-light" />
+                  <UnconnectButton />
                 </>
               )}
             </div>
@@ -250,10 +245,99 @@ export const ShowMe = () => {
   );
 };
 
+export const Login = () => {
+  const { fakts, load, setFakts } = useFakts();
+  const { user, logout } = useHerre();
+
+  return (
+    <Popover as="div" className="my-auto ">
+      <div>
+        <Popover.Button className="inline-flex border-0 cursor-pointer bg-primary-300  w-full justify-center rounded-md text-white px-4 py-2 my-auto shadow-primary-300/20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          {fakts.self.name}
+        </Popover.Button>
+      </div>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Popover.Panel
+          static
+          className="absolute right-0 mt-2 mr-2 w-56 origin-top-right divide-y divide-gray-100 border border-1 border-gray-400 rounded-md bg-white shadow-lg shadow ring-1 ring-black ring-opacity-5 focus:outline-none"
+        >
+          <div className="">
+            <div className="flex flex-col w-full ">
+              {user && (
+                <>
+                  <LoginButton
+                    className={() => "p-3 font-light"}
+                    buildGrant={async (fakts) => {
+                      return {
+                        clientId: fakts.lok.client_id,
+                        clientSecret: fakts.lok.client_secret,
+                        scopes: fakts.lok.scopes,
+                        redirectUri: window.location.origin + "/doks/callback",
+                      };
+                    }}
+                  />
+                  <UnconnectButton />
+                </>
+              )}
+            </div>
+          </div>
+        </Popover.Panel>
+      </Transition>
+    </Popover>
+  );
+};
+
+export const Connect = () => {
+  const { fakts, load, setFakts } = useFakts();
+
+  return (
+    <Popover as="div" className="my-auto ">
+      <div>
+        <Popover.Button className="inline-flex border-0 cursor-pointer bg-primary-300  w-full justify-center rounded-md text-white px-4 py-2 my-auto shadow-primary-300/20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          Connect
+        </Popover.Button>
+      </div>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Popover.Panel
+          static
+          className="absolute right-0 mt-2 mr-2 w-56 origin-top-right divide-y divide-gray-100 border border-1 border-gray-400 rounded-md bg-white shadow-lg shadow ring-1 ring-black ring-opacity-5 focus:outline-none"
+        >
+          <div className="">
+            <div className="flex flex-col w-full ">
+              <ConnectButtons
+                containerClassName="flex flex-col w-full p-1"
+                buttonClassName={() => "p-3 cursor-pointer font-light"}
+              />
+            </div>
+          </div>
+        </Popover.Panel>
+      </Transition>
+    </Popover>
+  );
+};
+
 export const Connector = (props) => {
   return (
-    <HerreGuard fallback={<NoFaktsFallback />}>
-      <ShowMe />
-    </HerreGuard>
+    <FaktsGuard fallback={<Connect />}>
+      <HerreGuard fallback={<Login />}>
+        <ShowMe />
+      </HerreGuard>
+    </FaktsGuard>
   );
 };

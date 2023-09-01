@@ -3,13 +3,21 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import { useLocation, useHistory } from "@docusaurus/router";
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import { useHerre } from "@jhnnsrs/herre";
 
 export const CallbackInner: React.FC<{}> = (props) => {
   const location = useLocation();
   const history = useHistory();
 
-  return <>{"Hallo"}</>;
+  useEffect(() => {
+    let code = new URLSearchParams(location.search).get("code");
+    console.log(code);
+    if (code) {
+      localStorage.setItem("herre-code", code);
+      window.close();
+    }
+  }, []);
+
+  return <>Signing in</>;
 };
 
 export default function Callback(): JSX.Element {

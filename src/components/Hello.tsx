@@ -1,21 +1,20 @@
 import { FaktsGuard, useFakts } from "@jhnnsrs/fakts";
 import { HerreGuard, useHerre } from "@jhnnsrs/herre";
+import {
+  ChartRegistry,
+  KraphQLProvider,
+  MultiComposed,
+  SmartRegistry,
+  Tree,
+  useKraphQL,
+} from "@jhnnsrs/kraphql";
+import { SmartProps } from "@jhnnsrs/kraphql/dist/types";
+import { gql } from "graphql-tag";
 import React, { useEffect, useState } from "react";
 import { NoFakts } from "../fallbacks/NoFakts";
 import { NoHerre } from "../fallbacks/NoHerre";
-import { MikroGuard, useMikro, withMikro, useMikroQuery } from "mikrots";
-import { MikroAutoConfigure } from "./bridges/MikroAutocConfigure";
 import { NoMikro } from "../fallbacks/NoMikro";
-import { gql } from "graphql-tag";
-import {
-  ChartRegistry,
-  DebugView,
-  MultiComposed,
-  SmartRegistry,
-} from "@jhnnsrs/kraphql";
-import { KraphQLProvider, Tree, ViolinChart } from "@jhnnsrs/kraphql";
-import { SmartProps } from "@jhnnsrs/kraphql/dist/types";
-import { useKraphQL } from "@jhnnsrs/kraphql";
+import { MikroGuard, useMikroQuery } from "@jhnnsrs/mikro";
 
 export const EntryTree: React.FC<{}> = (props) => {
   const { activeTree } = useKraphQL();
